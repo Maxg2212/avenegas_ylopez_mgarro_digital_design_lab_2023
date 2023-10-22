@@ -1,0 +1,6 @@
+module barrel_shifter (
+	input logic [31:0] input_data,
+	input logic [1:0] input_mode,
+	input logic [4:0] input_shift_count,
+	output logic [31:0] output_data
+);
