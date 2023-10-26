@@ -14,7 +14,7 @@ module ALU #(parameter N = 32)(
 	adder_ALU #(32) adder_instancia (a, b, 1'b0, resultADD, carry_out_ADD);
 	adder_ALU #(32) subtractor_instancia (a, ~b, 1'b1, resultSUB, carry_out_SUB);
 	
-	barrel_shifter b_shr (b, tipo_shift, cantidad_shifts, Resultado);
+	barrel_shifter b_shr (b, tipo_shift, cantidad_shifts, resultSHIFT);
 	
 	
 	assign resultAND = a & b;
