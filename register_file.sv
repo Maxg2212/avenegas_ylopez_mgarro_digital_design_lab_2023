@@ -2,7 +2,7 @@ module register_file (
 	input logic clk,
 	input logic we3, //indice si hay que realizar una escritura en el registro
 	input logic [3:0] ra1, ra2, wa3,
-	input logic [31:0] wd3, r15,
+	input logic [31:0] wd3, r15, //wd3 es para almacenar resultados
 	output logic [31:0] rd1, rd2
 );
 
