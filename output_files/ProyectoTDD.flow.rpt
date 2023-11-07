@@ -1,5 +1,5 @@
 Flow report for ProyectoTDD
-Sat Nov 04 23:02:01 2023
+Mon Nov 06 23:14:26 2023
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -41,10 +41,10 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------------------------------------+
 ; Flow Summary                                                              ;
 +-----------------------------+---------------------------------------------+
-; Flow Status                 ; Successful - Sat Nov 04 23:02:01 2023       ;
+; Flow Status                 ; Successful - Mon Nov 06 23:14:26 2023       ;
 ; Quartus Prime Version       ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
 ; Revision Name               ; ProyectoTDD                                 ;
-; Top-level Entity Name       ; ram_tb                                      ;
+; Top-level Entity Name       ; display7                                    ;
 ; Family                      ; Cyclone V                                   ;
 ; Device                      ; 5CSEMA5F31C6                                ;
 ; Timing Models               ; Final                                       ;
@@ -63,7 +63,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 11/04/2023 23:01:46 ;
+; Start date & time ; 11/06/2023 23:14:16 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; ProyectoTDD         ;
 +-------------------+---------------------+
@@ -74,7 +74,7 @@ https://fpgasoftware.intel.com/eula.
 +--------------------------------------+----------------------------------------+---------------+-------------+----------------+
 ; Assignment Name                      ; Value                                  ; Default Value ; Entity Name ; Section Id     ;
 +--------------------------------------+----------------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID                ; 1096770795724.169916050625728          ; --            ; --          ; --             ;
+; COMPILER_SIGNATURE_ID                ; 1096770795724.169933405612708          ; --            ; --          ; --             ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --          ; ram_tb         ;
 ; EDA_NATIVELINK_SIMULATION_TEST_BENCH ; ram_tb                                 ; --            ; --          ; eda_simulation ;
 ; EDA_OUTPUT_DATA_FORMAT               ; Verilog Hdl                            ; --            ; --          ; eda_simulation ;
@@ -87,13 +87,13 @@ https://fpgasoftware.intel.com/eula.
 ; MAX_CORE_JUNCTION_TEMP               ; 85                                     ; --            ; --          ; --             ;
 ; MIN_CORE_JUNCTION_TEMP               ; 0                                      ; --            ; --          ; --             ;
 ; MISC_FILE                            ; ram1_bb.v                              ; --            ; --          ; --             ;
-; PARTITION_COLOR                      ; -- (Not supported for targeted family) ; --            ; ram_tb      ; Top            ;
-; PARTITION_FITTER_PRESERVATION_LEVEL  ; -- (Not supported for targeted family) ; --            ; ram_tb      ; Top            ;
-; PARTITION_NETLIST_TYPE               ; -- (Not supported for targeted family) ; --            ; ram_tb      ; Top            ;
+; PARTITION_COLOR                      ; -- (Not supported for targeted family) ; --            ; display7    ; Top            ;
+; PARTITION_FITTER_PRESERVATION_LEVEL  ; -- (Not supported for targeted family) ; --            ; display7    ; Top            ;
+; PARTITION_NETLIST_TYPE               ; -- (Not supported for targeted family) ; --            ; display7    ; Top            ;
 ; POWER_BOARD_THERMAL_MODEL            ; None (CONSERVATIVE)                    ; --            ; --          ; --             ;
 ; POWER_PRESET_COOLING_SOLUTION        ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW  ; --            ; --          ; --             ;
 ; PROJECT_OUTPUT_DIRECTORY             ; output_files                           ; --            ; --          ; --             ;
-; TOP_LEVEL_ENTITY                     ; ram_tb                                 ; ProyectoTDD   ; --          ; --             ;
+; TOP_LEVEL_ENTITY                     ; display7                               ; ProyectoTDD   ; --          ; --             ;
 +--------------------------------------+----------------------------------------+---------------+-------------+----------------+
 
 
@@ -102,8 +102,8 @@ https://fpgasoftware.intel.com/eula.
 +------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name            ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Elaboration ; 00:00:16     ; 1.0                     ; 4780 MB             ; 00:00:40                           ;
-; Total                  ; 00:00:16     ; --                      ; --                  ; 00:00:40                           ;
+; Analysis & Elaboration ; 00:00:10     ; 1.0                     ; 4768 MB             ; 00:00:27                           ;
+; Total                  ; 00:00:10     ; --                      ; --                  ; 00:00:27                           ;
 +------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
