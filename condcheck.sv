@@ -5,11 +5,11 @@ module condcheck(
 					  
   logic neg, zero, carry, overflow, ge;
 
-  assign {neg, zero, carry, overflow} = Flags;
-  assign ge = (neg == overflow);
+  assign {neg, zero, carry, overflow} = Flags; //Se descompone el bus "Flags" en sus partes individuales.
+  assign ge = (neg == overflow); //ge se utiliza para comparar neg y overlfow
   
   always_comb
-	 case(Cond)
+	 case(Cond) //Cada caso corresponde a un valor especifico Cond
 		4'b0000: CondEx = zero; // EQ
 		4'b0001: CondEx = ~zero; // NE
 		4'b0010: CondEx = carry; // CS
