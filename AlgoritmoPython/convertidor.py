@@ -1,7 +1,7 @@
 from PIL import Image
 import numpy as np
 
-MAX_SIZE = 30003
+MAX_SIZE = 30002
 
 
 ## Genera el archivo .mif para cargar los datos de la imagen en la ROM

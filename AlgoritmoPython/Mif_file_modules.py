@@ -2,7 +2,7 @@ from PIL import Image
 import numpy as np
 import mif 
 
-MAX_SIZE = 30003
+MAX_SIZE = 30002
 
 def mif_file(grey_image_array):
     image_width = len(grey_image_array[0])

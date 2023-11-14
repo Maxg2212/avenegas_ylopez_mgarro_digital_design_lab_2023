@@ -101,3 +101,8 @@ set_global_assignment -name QIP_FILE RAM2.qip
 set_global_assignment -name SYSTEMVERILOG_FILE dmem.sv
 set_global_assignment -name SYSTEMVERILOG_FILE imem.sv
 set_global_assignment -name SYSTEMVERILOG_FILE counter.sv
+set_global_assignment -name SYSTEMVERILOG_FILE decoder.sv
+set_global_assignment -name SYSTEMVERILOG_FILE datapath.sv
+set_global_assignment -name SYSTEMVERILOG_FILE controller.sv
+set_global_assignment -name SYSTEMVERILOG_FILE arm.sv
+set_global_assignment -name SYSTEMVERILOG_FILE main.sv
