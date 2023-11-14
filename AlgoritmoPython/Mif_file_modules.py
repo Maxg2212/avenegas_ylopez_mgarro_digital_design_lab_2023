@@ -2,7 +2,7 @@ from PIL import Image
 import numpy as np
 import mif 
 
-MAX_SIZE = 65536
+MAX_SIZE = 30003
 
 def mif_file(grey_image_array):
     image_width = len(grey_image_array[0])
@@ -14,7 +14,7 @@ def mif_file(grey_image_array):
             mif_data[i * image_width + j] = int(grey_image_array[i][j])
 
     mif_data[image_depth * image_width:] = 0
-    with open("../image_hex_data_1.mif", "w") as f:
+    with open("../ram_data1.mif", "w") as f:
         f.write("DEPTH = {};\n".format(MAX_SIZE))
         f.write("WIDTH = 32;\n")
         f.write("ADDRESS_RADIX = UNS;\n")
@@ -38,13 +38,13 @@ def save_grey_image(grey_image_array, name):
 
 def convert_to_grey(file_name):
     image = Image.open(file_name)
-    new_image = image.resize((256, 256))
+    new_image = image.resize((100, 100))
     image_array = np.array(new_image)
     grey_image_array = 0.114 * image_array[:, :, 0] + 0.587 * image_array[:, :, 1] + 0.299 * image_array[:, :, 2]
 
     return grey_image_array
 
     
-grey_image_array = convert_to_grey('C:\\Users\\yarit\\OneDrive\\Imágenes\\Capturas de pantalla\\tb2.png')
+grey_image_array = convert_to_grey('C:\\Users\\maxga\\OneDrive\\Documentos\\Cursos CE\\Taller Diseño Digital S2.2023\\imagen\\minion.png')
 save_grey_image(grey_image_array, "imagen2")
 mif_file(grey_image_array)
