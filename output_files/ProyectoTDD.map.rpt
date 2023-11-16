@@ -1,6 +1,6 @@
 Analysis & Elaboration report for ProyectoTDD
-Mon Nov 06 23:14:26 2023
-Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
+Tue Nov 14 19:45:06 2023
+Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
 ---------------------
@@ -38,8 +38,8 @@ https://fpgasoftware.intel.com/eula.
 +-----------------------------------------------------------------------------+
 ; Analysis & Elaboration Summary                                              ;
 +-------------------------------+---------------------------------------------+
-; Analysis & Elaboration Status ; Successful - Mon Nov 06 23:14:26 2023       ;
-; Quartus Prime Version         ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
+; Analysis & Elaboration Status ; Failed - Tue Nov 14 19:45:06 2023           ;
+; Quartus Prime Version         ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                 ; ProyectoTDD                                 ;
 ; Top-level Entity Name         ; display7                                    ;
 ; Family                        ; Cyclone V                                   ;
@@ -58,7 +58,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 8           ;
+; Number detected on machine ; 4           ;
 ; Maximum allowed            ; 4           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
@@ -161,62 +161,83 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------+
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Elaboration
-    Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
-    Info: Processing started: Mon Nov 06 23:14:16 2023
+    Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+    Info: Processing started: Tue Nov 14 19:44:54 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off ProyectoTDD -c ProyectoTDD --analysis_and_elaboration
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file alu.sv
-    Info (12023): Found entity 1: ALU File: C:/Users/maxga/OneDrive/Documentos/TDD_Labs2/ylopez_mgarro_digital_design_lab_2023/ALU.sv Line: 1
+    Info (12023): Found entity 1: ALU File: C:/Users/pepev/OneDrive/Documentos/GitHub/ylopez_mgarro_digital_design_lab_2023/ALU.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file adder_alu.sv
-    Info (12023): Found entity 1: adder_ALU File: C:/Users/maxga/OneDrive/Documentos/TDD_Labs2/ylopez_mgarro_digital_design_lab_2023/adder_ALU.sv Line: 1
+    Info (12023): Found entity 1: adder_ALU File: C:/Users/pepev/OneDrive/Documentos/GitHub/ylopez_mgarro_digital_design_lab_2023/adder_ALU.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file barrel_shifter.sv
-    Info (12023): Found entity 1: barrel_shifter File: C:/Users/maxga/OneDrive/Documentos/TDD_Labs2/ylopez_mgarro_digital_design_lab_2023/barrel_shifter.sv Line: 1
+    Info (12023): Found entity 1: barrel_shifter File: C:/Users/pepev/OneDrive/Documentos/GitHub/ylopez_mgarro_digital_design_lab_2023/barrel_shifter.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file mux2entradas.sv
-    Info (12023): Found entity 1: mux2entradas File: C:/Users/maxga/OneDrive/Documentos/TDD_Labs2/ylopez_mgarro_digital_design_lab_2023/mux2entradas.sv Line: 1
+    Info (12023): Found entity 1: mux2entradas File: C:/Users/pepev/OneDrive/Documentos/GitHub/ylopez_mgarro_digital_design_lab_2023/mux2entradas.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file register_file.sv
-    Info (12023): Found entity 1: register_file File: C:/Users/maxga/OneDrive/Documentos/TDD_Labs2/ylopez_mgarro_digital_design_lab_2023/register_file.sv Line: 1
+    Info (12023): Found entity 1: register_file File: C:/Users/pepev/OneDrive/Documentos/GitHub/ylopez_mgarro_digital_design_lab_2023/register_file.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file extend_module.sv
-    Info (12023): Found entity 1: extend_module File: C:/Users/maxga/OneDrive/Documentos/TDD_Labs2/ylopez_mgarro_digital_design_lab_2023/extend_module.sv Line: 1
+    Info (12023): Found entity 1: extend_module File: C:/Users/pepev/OneDrive/Documentos/GitHub/ylopez_mgarro_digital_design_lab_2023/extend_module.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file sumador.sv
-    Info (12023): Found entity 1: sumador File: C:/Users/maxga/OneDrive/Documentos/TDD_Labs2/ylopez_mgarro_digital_design_lab_2023/sumador.sv Line: 1
+    Info (12023): Found entity 1: sumador File: C:/Users/pepev/OneDrive/Documentos/GitHub/ylopez_mgarro_digital_design_lab_2023/sumador.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file hhclock.sv
-    Info (12023): Found entity 1: hhclock File: C:/Users/maxga/OneDrive/Documentos/TDD_Labs2/ylopez_mgarro_digital_design_lab_2023/hhclock.sv Line: 1
+    Info (12023): Found entity 1: hhclock File: C:/Users/pepev/OneDrive/Documentos/GitHub/ylopez_mgarro_digital_design_lab_2023/hhclock.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file mux_21.sv
-    Info (12023): Found entity 1: mux_21 File: C:/Users/maxga/OneDrive/Documentos/TDD_Labs2/ylopez_mgarro_digital_design_lab_2023/mux_21.sv Line: 1
+    Info (12023): Found entity 1: mux_21 File: C:/Users/pepev/OneDrive/Documentos/GitHub/ylopez_mgarro_digital_design_lab_2023/mux_21.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file top_module.sv
-    Info (12023): Found entity 1: top_module File: C:/Users/maxga/OneDrive/Documentos/TDD_Labs2/ylopez_mgarro_digital_design_lab_2023/top_module.sv Line: 1
+    Info (12023): Found entity 1: top_module File: C:/Users/pepev/OneDrive/Documentos/GitHub/ylopez_mgarro_digital_design_lab_2023/top_module.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file write_mem.sv
-    Info (12023): Found entity 1: write_mem File: C:/Users/maxga/OneDrive/Documentos/TDD_Labs2/ylopez_mgarro_digital_design_lab_2023/write_mem.sv Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file counter.sv
-    Info (12023): Found entity 1: Counter File: C:/Users/maxga/OneDrive/Documentos/TDD_Labs2/ylopez_mgarro_digital_design_lab_2023/Counter.sv Line: 1
+    Info (12023): Found entity 1: write_mem File: C:/Users/pepev/OneDrive/Documentos/GitHub/ylopez_mgarro_digital_design_lab_2023/write_mem.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file ram_tb.sv
-    Info (12023): Found entity 1: ram_tb File: C:/Users/maxga/OneDrive/Documentos/TDD_Labs2/ylopez_mgarro_digital_design_lab_2023/ram_tb.sv Line: 1
+    Info (12023): Found entity 1: ram_tb File: C:/Users/pepev/OneDrive/Documentos/GitHub/ylopez_mgarro_digital_design_lab_2023/ram_tb.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file ram1.v
-    Info (12023): Found entity 1: ram1 File: C:/Users/maxga/OneDrive/Documentos/TDD_Labs2/ylopez_mgarro_digital_design_lab_2023/ram1.v Line: 40
+    Info (12023): Found entity 1: ram1 File: C:/Users/pepev/OneDrive/Documentos/GitHub/ylopez_mgarro_digital_design_lab_2023/ram1.v Line: 40
 Info (12021): Found 1 design units, including 1 entities, in source file flopenr.sv
-    Info (12023): Found entity 1: flopenr File: C:/Users/maxga/OneDrive/Documentos/TDD_Labs2/ylopez_mgarro_digital_design_lab_2023/flopenr.sv Line: 1
+    Info (12023): Found entity 1: flopenr File: C:/Users/pepev/OneDrive/Documentos/GitHub/ylopez_mgarro_digital_design_lab_2023/flopenr.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file flopr.sv
-    Info (12023): Found entity 1: flopr File: C:/Users/maxga/OneDrive/Documentos/TDD_Labs2/ylopez_mgarro_digital_design_lab_2023/flopr.sv Line: 1
+    Info (12023): Found entity 1: flopr File: C:/Users/pepev/OneDrive/Documentos/GitHub/ylopez_mgarro_digital_design_lab_2023/flopr.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file display7.sv
-    Info (12023): Found entity 1: display7 File: C:/Users/maxga/OneDrive/Documentos/TDD_Labs2/ylopez_mgarro_digital_design_lab_2023/display7.sv Line: 1
+    Info (12023): Found entity 1: display7 File: C:/Users/pepev/OneDrive/Documentos/GitHub/ylopez_mgarro_digital_design_lab_2023/display7.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file condlogic.sv
-    Info (12023): Found entity 1: condlogic File: C:/Users/maxga/OneDrive/Documentos/TDD_Labs2/ylopez_mgarro_digital_design_lab_2023/condlogic.sv Line: 1
+    Info (12023): Found entity 1: condlogic File: C:/Users/pepev/OneDrive/Documentos/GitHub/ylopez_mgarro_digital_design_lab_2023/condlogic.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file condcheck.sv
-    Info (12023): Found entity 1: condcheck File: C:/Users/maxga/OneDrive/Documentos/TDD_Labs2/ylopez_mgarro_digital_design_lab_2023/condcheck.sv Line: 1
-Warning (10236): Verilog HDL Implicit Net warning at top_module.sv(13): created implicit net for "addr_cont" File: C:/Users/maxga/OneDrive/Documentos/TDD_Labs2/ylopez_mgarro_digital_design_lab_2023/top_module.sv Line: 13
-Info (12127): Elaborating entity "display7" for the top level hierarchy
-Info (144001): Generated suppressed messages file C:/Users/maxga/OneDrive/Documentos/TDD_Labs2/ylopez_mgarro_digital_design_lab_2023/output_files/ProyectoTDD.map.smsg
-Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 2 warnings
-    Info: Peak virtual memory: 4768 megabytes
-    Info: Processing ended: Mon Nov 06 23:14:26 2023
-    Info: Elapsed time: 00:00:10
-    Info: Total CPU time (on all processors): 00:00:27
+    Info (12023): Found entity 1: condcheck File: C:/Users/pepev/OneDrive/Documentos/GitHub/ylopez_mgarro_digital_design_lab_2023/condcheck.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file ram2.v
+    Info (12023): Found entity 1: RAM2 File: C:/Users/pepev/OneDrive/Documentos/GitHub/ylopez_mgarro_digital_design_lab_2023/RAM2.v Line: 40
+Error (10170): Verilog HDL syntax error at dmem.sv(2) near text: "input";  expecting ")". Check for and fix any syntax errors that appear immediately before or at the specified keyword. The Intel FPGA Knowledge Database contains many articles with specific details on how to resolve this error. Visit the Knowledge Database at https://www.altera.com/support/support-resources/knowledge-base/search.html and search for this specific error message number. File: C:/Users/pepev/OneDrive/Documentos/GitHub/ylopez_mgarro_digital_design_lab_2023/dmem.sv Line: 2
+Error (10112): Ignored design unit "dmem" at dmem.sv(1) due to previous errors File: C:/Users/pepev/OneDrive/Documentos/GitHub/ylopez_mgarro_digital_design_lab_2023/dmem.sv Line: 1
+Info (12021): Found 0 design units, including 0 entities, in source file dmem.sv
+Info (12021): Found 1 design units, including 1 entities, in source file imem.sv
+    Info (12023): Found entity 1: imem File: C:/Users/pepev/OneDrive/Documentos/GitHub/ylopez_mgarro_digital_design_lab_2023/imem.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file counter.sv
+    Info (12023): Found entity 1: counter File: C:/Users/pepev/OneDrive/Documentos/GitHub/ylopez_mgarro_digital_design_lab_2023/counter.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file decoder.sv
+    Info (12023): Found entity 1: decoder File: C:/Users/pepev/OneDrive/Documentos/GitHub/ylopez_mgarro_digital_design_lab_2023/decoder.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file datapath.sv
+    Info (12023): Found entity 1: datapath File: C:/Users/pepev/OneDrive/Documentos/GitHub/ylopez_mgarro_digital_design_lab_2023/datapath.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file controller.sv
+    Info (12023): Found entity 1: controller File: C:/Users/pepev/OneDrive/Documentos/GitHub/ylopez_mgarro_digital_design_lab_2023/controller.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file arm.sv
+    Info (12023): Found entity 1: arm File: C:/Users/pepev/OneDrive/Documentos/GitHub/ylopez_mgarro_digital_design_lab_2023/arm.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file main.sv
+    Info (12023): Found entity 1: main File: C:/Users/pepev/OneDrive/Documentos/GitHub/ylopez_mgarro_digital_design_lab_2023/main.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file vgacontroller.sv
+    Info (12023): Found entity 1: vgaController File: C:/Users/pepev/OneDrive/Documentos/GitHub/ylopez_mgarro_digital_design_lab_2023/vgaController.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file vga.sv
+    Info (12023): Found entity 1: vga File: C:/Users/pepev/OneDrive/Documentos/GitHub/ylopez_mgarro_digital_design_lab_2023/vga.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file videogenerator.sv
+    Info (12023): Found entity 1: videoGenerator File: C:/Users/pepev/OneDrive/Documentos/GitHub/ylopez_mgarro_digital_design_lab_2023/videoGenerator.sv Line: 1
+Info (144001): Generated suppressed messages file C:/Users/pepev/OneDrive/Documentos/GitHub/ylopez_mgarro_digital_design_lab_2023/output_files/ProyectoTDD.map.smsg
+Error: Quartus Prime Analysis & Elaboration was unsuccessful. 2 errors, 1 warning
+    Error: Peak virtual memory: 4766 megabytes
+    Error: Processing ended: Tue Nov 14 19:45:06 2023
+    Error: Elapsed time: 00:00:12
+    Error: Total CPU time (on all processors): 00:00:22
 
 
 +--------------------------------------------+
 ; Analysis & Elaboration Suppressed Messages ;
 +--------------------------------------------+
-The suppressed messages can be found in C:/Users/maxga/OneDrive/Documentos/TDD_Labs2/ylopez_mgarro_digital_design_lab_2023/output_files/ProyectoTDD.map.smsg.
+The suppressed messages can be found in C:/Users/pepev/OneDrive/Documentos/GitHub/ylopez_mgarro_digital_design_lab_2023/output_files/ProyectoTDD.map.smsg.
 
 
