@@ -45,6 +45,43 @@ module main(input logic clk_50Mhz_in, reset,
 				 WriteData, MemWriteEnable,
 				 ReadDataA, ReadDataB);
 	
+	// ROM que guarda los datos de la imagen (256x256 tamaño máximo)
+	//ROM2 image_rom(pixelAdrOriginalA, pixelAdrOriginalB, 
+	//					clk_25Mhz, 
+	//					pixelOriginalA, pixelOriginalB);
+	
+	
+	
+	// Interprete para ayudarle al Driver VGA a dibujar las dos imagenes
+	interpreter inter(next_x, next_y,
+						   pixelOriginalB, ReadDataB,
+							pixelAdrOriginalB, DataAdrB,
+						   pixel_color);
+	
+	// Driver VGA (para mostrar las dos imagenes en pantalla)
+	vga_driver draw(clk_25Mhz, reset_vga, pixel_color,
+						 VGA_HS, VGA_VS,
+						 VGA_R, VGA_G, VGA_B, 
+						 VGA_SYNC_N, VGA_CLK, VGA_BLANK_N,
+						 next_x, next_y);
+	
+	// Reloj para la salida VGA
+	always_ff @ (posedge clk_50Mhz_in)
+		clk_25Mhz <= ~clk_25Mhz;
+	
+	
+	// Detiene el procesador cuando termina la tarea de ecualizacion
+	always_comb begin
+		
+		if(PC > 32'd_408) begin 
+			clk_ARM = 0;
+			led_success = 1;
+		end
+		else begin
+			clk_ARM = clk_25Mhz;
+			led_success = 0;
+		end
+	end
 	
 	
 endmodule 
