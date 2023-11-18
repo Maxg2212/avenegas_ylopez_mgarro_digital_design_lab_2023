@@ -106,3 +106,4 @@ set_global_assignment -name SYSTEMVERILOG_FILE datapath.sv
 set_global_assignment -name SYSTEMVERILOG_FILE controller.sv
 set_global_assignment -name SYSTEMVERILOG_FILE arm.sv
 set_global_assignment -name SYSTEMVERILOG_FILE main.sv
+set_global_assignment -name SYSTEMVERILOG_FILE main_tb.sv
