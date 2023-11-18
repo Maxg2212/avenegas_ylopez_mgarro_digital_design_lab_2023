@@ -30,25 +30,23 @@ module decoder(input logic [1:0] Op,
 	 RegW, MemW, Branch, ALUOp} = controls;
 	 
   // ALU Decoder
-  always_comb
-  if (ALUOp) begin // which DP Instr?
-	  case(Funct[4:1])
+	always_comb
+	if (ALUOp) begin // which DP Instr?
+		case(Funct[4:1])
 			4'b0100: ALUControl = 3'b000; // ADD
 			4'b0010: ALUControl = 3'b001; // SUB
 			4'b0000: ALUControl = 3'b010; // AND
 			4'b1100: ALUControl = 3'b011; // ORR
-			4'b1101: ALUControl = 3'b100; // Shift
-			default: ALUControl = 3'bx; // unimplemented
-	  endcase
-	  // update flags if S bit is set (C & V only for arith)
-	  FlagW[1] = Funct[0];
-	  FlagW[0] = Funct[0] &
-		 (ALUControl == 3'b000 | ALUControl == 3'b001);
-  end else begin
-	 ALUControl = 3'b000; // add for non-DP instructions
-	 FlagW = 2'b00; // don't update Flags
-  end
-  
-  // PC Logic
-  assign PCS = ((Rd == 4'b1111) & RegW) | Branch;
-endmodule
+			default: ALUControl = 2'bx; // unimplemented
+		endcase
+		// update flags if S bit is set (C & V only for arith)
+		FlagW[1] = Funct[0];
+		FlagW[0] = Funct[0] &
+					  (ALUControl == 3'b000 | ALUControl == 3'b001);
+		end else begin
+			ALUControl = 3'b000; // add for non-DP instructions
+			FlagW = 2'b00; // don't update Flags
+		end
+		// PC Logic
+		assign PCS = ((Rd == 4'b1111) & RegW) | Branch;	
+endmodule 

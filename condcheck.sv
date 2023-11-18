@@ -27,4 +27,4 @@ module condcheck(
 		4'b1110: CondEx = 1'b1; // Always
 		default: CondEx = 1'bx; // undefined
 	 endcase
-endmodule
+endmodule 
