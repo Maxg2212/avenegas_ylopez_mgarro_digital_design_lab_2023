@@ -25,7 +25,7 @@ def generate_mif_file(grey_image_array):
 
     string_datos += "END;\n"
 
-    with open("../ram_data1.mif", "w") as mif_file:
+    with open("../ram_data2.mif", "w") as mif_file:
         mif_file.write(string_datos)
 
 

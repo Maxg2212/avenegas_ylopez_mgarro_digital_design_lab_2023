@@ -6,19 +6,14 @@ module main(
 
 
 	//logic [31:0] PC = 32'd_0; 
-	logic [31:0] Instr, ReadData, PC;
+	
+	logic [14:0] address;
+	
+	Processor_module processor(clk, reset, WriteData, DataAdr, MemWrite);
 
 	
 	
-	// Procesador ARM uniciclo
-	arm arm(clk, reset, PC, Instr, MemWrite, DataAdr,
-				WriteData, ReadData);
 	
-	// RAM con las instrucciones del algoritmo ecualizador
-	imem imem(PC, Instr);
-	
-	// RAM para guardar la imagen ecualizada y los datos de las operaciones
-	dmem dmem(clk, MemWrite,DataAdr, WriteData, ReadData);
 	
 	
 	
