@@ -29,7 +29,7 @@ module dmem(input logic clk, we,
 				 we_a, we_b,
 				 rd_a, rd_b);
 	*/
-	RAM2 ram(a, clk, wd, we, rd);
+	RAM4 ram(a, clk, wd, we, rd);
 	
 		
 endmodule

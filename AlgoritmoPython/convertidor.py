@@ -1,7 +1,7 @@
 from PIL import Image
 import numpy as np
 
-MAX_SIZE = 30002
+MAX_SIZE = 65536
 
 
 ## Genera el archivo .mif para cargar los datos de la imagen en la ROM
@@ -25,7 +25,7 @@ def generate_mif_file(grey_image_array):
 
     string_datos += "END;\n"
 
-    with open("../ram_data2.mif", "w") as mif_file:
+    with open("../ram_data3.mif", "w") as mif_file:
         mif_file.write(string_datos)
 
 

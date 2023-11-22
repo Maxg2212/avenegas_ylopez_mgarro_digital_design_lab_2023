@@ -9,7 +9,7 @@ logic wren, seconds;
 
 logic [7:0] data, addr_wr, add_cont;
 
-ram1 mem(address, seconds, data, wren, q);
+ram4 mem(address, seconds, data, wren, q);
 Counter cont(seconds, rst, 1'b1, addr_cont);
 hhclock div(seconds, clk);
 write_mem escribir(btn, wren, addr_wr, data);
