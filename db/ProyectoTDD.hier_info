@@ -10,14 +10,14 @@ b_i[3] => b_i[3].IN1
 opcode_i[0] => opcode_i[0].IN1
 opcode_i[1] => opcode_i[1].IN1
 opcode_i[2] => opcode_i[2].IN1
-result_o[0] <= Selector3.DB_MAX_OUTPUT_PORT_TYPE
-result_o[1] <= Selector2.DB_MAX_OUTPUT_PORT_TYPE
-result_o[2] <= Selector1.DB_MAX_OUTPUT_PORT_TYPE
-result_o[3] <= Selector0.DB_MAX_OUTPUT_PORT_TYPE
-ALUFlags[0] <= Selector0.DB_MAX_OUTPUT_PORT_TYPE
-ALUFlags[1] <= Equal2.DB_MAX_OUTPUT_PORT_TYPE
-ALUFlags[2] <= ALUFlags.DB_MAX_OUTPUT_PORT_TYPE
-ALUFlags[3] <= ALUFlags.DB_MAX_OUTPUT_PORT_TYPE
+result_o[0] << Selector3.DB_MAX_OUTPUT_PORT_TYPE
+result_o[1] << Selector2.DB_MAX_OUTPUT_PORT_TYPE
+result_o[2] << Selector1.DB_MAX_OUTPUT_PORT_TYPE
+result_o[3] << Selector0.DB_MAX_OUTPUT_PORT_TYPE
+ALUFlags[0] << Selector0.DB_MAX_OUTPUT_PORT_TYPE
+ALUFlags[1] << Equal2.DB_MAX_OUTPUT_PORT_TYPE
+ALUFlags[2] << ALUFlags.DB_MAX_OUTPUT_PORT_TYPE
+ALUFlags[3] << ALUFlags.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |ALU|AluAritmetic:arithmetics

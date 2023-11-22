@@ -1,72 +1,48 @@
-`timescale 1 ns / 1 ns
+module VGA_tb;
 
-module vga_tb();
+  // Parámetros de simulación
+  reg clk=0;
+  reg reset=0;
+  reg [7:0] red;
+  reg [7:0] green;
+  reg [7:0] blue;
+  reg clk_25MHz;
+  wire sync_n,h_sync,v_sync;
+  wire blank_n;
 
-	logic VGA_HS, VGA_VS;
-	logic [7:0] VGA_R, VGA_G, VGA_B;
-	logic VGA_SYNC_N, VGA_CLK, VGA_BLANK_N;
-	
-	logic [31:0] WriteData, DataAdrA, DataAdrB;
-	logic MemWriteEnable;
-	
-	logic [31:0] PC = 32'd_0;
-	logic [31:0] Instr, ReadDataA, ReadDataB;
-	logic clk_ARM;
-	
-	logic [31:0] pixelOriginalA, pixelOriginalB;
-	logic [15:0] pixelAdrOriginalA, pixelAdrOriginalB;
-	
-	logic [23:0] pixel_color;
-	
-	logic [31:0] next_x = 32'd_0;
-	logic [31:0] next_y = 32'd_0;
-	
-	logic clk_25Mhz = 0;
-	logic reset_vga = 0;
-	
-	
-	RAM2 image_ram(pixelAdrOriginalA, 
-					clk_25Mhz, 
-					WriteData,
-					MemWriteEnable,
-					pixelOriginalA);
-	
-	interpreter inter(next_x, next_y,
-						   pixelOriginalB, ReadDataB,
-							pixelAdrOriginalB, DataAdrB,
-						   pixel_color);
-	
-	
-	vgaController draw(clk_25Mhz, reset_vga, pixel_color,
-						 VGA_HS, VGA_VS,
-						 VGA_R, VGA_G, VGA_B, 
-						 VGA_SYNC_N, VGA_CLK, VGA_BLANK_N,
-						 next_x, next_y);
-	
-	initial begin
-		
-		clk_25Mhz = 0; # 5;
-		clk_25Mhz = 1; # 5;
-		assert (pixelAdrOriginalB === 16'd_1) else begin
-			$error("La direccion deberia ser 0x1");
-			$stop;
-		end
-		clk_25Mhz = 0; # 5;
-		clk_25Mhz = 1; # 5;
-		assert (pixelAdrOriginalB === 16'd_2) else begin
-			$error("La direccion deberia ser 0x2");
-			$stop;
-		end
-		clk_25Mhz = 0; # 5;
-		clk_25Mhz = 1; # 5;
-		assert (pixelAdrOriginalB === 16'd_3) else begin
-			$error("La direccion deberia ser 0x2");
-			$stop;
-		end
-		clk_25Mhz = 0; # 5;
-		clk_25Mhz = 1; # 5;
-		
-		$display("Simulacion del driver VGA y el interprete exitosa.");
-	end
-	
+  // Instancia del módulo de video_controller
+  video_controller dutio(
+    .clk(clk),
+	 .reset(reset),
+    .h_sync(h_sync),
+    .v_sync(v_sync),
+    .red(red),
+    .green(green),
+    .blue(blue),
+    .clk_25MHz(clk_25MHz),
+    .sync_n(sync_n),
+    .blank_n(blank_n)
+  );
+  
+ /* VGA_pll pkpk(
+     .clk(clk),
+	  .reset(reset), 
+     .vga_clk(clk_25MHz)
+);*/
+
+  // Generador de clock
+  always begin
+    #5 clk = ~clk; // Invertir el reloj cada 5 unidades de tiempo
+  end
+
+  // Estímulos de prueba
+  initial begin
+  
+
+	 #5 reset=1;
+	 #5 reset=0;
+	 #150000;
+    $finish;
+  end
+
 endmodule
