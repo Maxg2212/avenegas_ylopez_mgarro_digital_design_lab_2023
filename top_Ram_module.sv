@@ -1,12 +1,12 @@
 module top_Ram_module(input logic clk, reset, switch,
 								input logic [2:0] btn, 
 								output [31:0] q,
-								output [14:0] address);
+								output [15:0] address);
 								
 			logic wrenable;
 			logic seconds;
 			logic [31:0] data;
-			logic [14:0] addressRead, addressWrite;
+			logic [15:0] addressRead, addressWrite;
 			
 			RAM2 ram(address, seconds, data, wrenable, q);
 			
@@ -16,7 +16,7 @@ module top_Ram_module(input logic clk, reset, switch,
 			
 			mux2entradas mux2e(addressWrite, addressRead, reset, address);
 			
-			hhclock hhclock(seconds, clk);
+			hhclock hhclock(clk, seconds);
 			
 
 

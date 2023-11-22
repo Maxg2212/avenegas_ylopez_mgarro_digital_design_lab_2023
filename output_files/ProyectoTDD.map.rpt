@@ -1,5 +1,5 @@
-Analysis & Elaboration report for ProyectoTDD
-Wed Nov 22 00:05:04 2023
+Analysis & Synthesis report for ProyectoTDD
+Wed Nov 22 01:26:16 2023
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -7,13 +7,33 @@ Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 ; Table of Contents ;
 ---------------------
   1. Legal Notice
-  2. Analysis & Elaboration Summary
-  3. Parallel Compilation
-  4. Parameter Settings for User Entity Instance: Top-level Entity: |ALU
-  5. Parameter Settings for User Entity Instance: AluAritmetic:arithmetics
-  6. Analysis & Elaboration Settings
-  7. Analysis & Elaboration Messages
-  8. Analysis & Elaboration Suppressed Messages
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. Analysis & Synthesis RAM Summary
+  9. User-Specified and Inferred Latches
+ 10. Registers Removed During Synthesis
+ 11. General Register Statistics
+ 12. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 13. Source assignments for top_Ram_module:topR|RAM2:ram|altsyncram:altsyncram_component|altsyncram_jqo1:auto_generated
+ 14. Parameter Settings for User Entity Instance: top_Ram_module:topR|RAM2:ram|altsyncram:altsyncram_component
+ 15. Parameter Settings for User Entity Instance: top_Ram_module:topR|mux2entradas:mux2e
+ 16. Parameter Settings for User Entity Instance: vga_top:vgat|vgaController:vgaCont
+ 17. altsyncram Parameter Settings by Entity Instance
+ 18. Port Connectivity Checks: "vga_top:vgat|generate_graphic:generar_g|generate_rectangle:rectImage"
+ 19. Port Connectivity Checks: "vga_top:vgat"
+ 20. Port Connectivity Checks: "top_Ram_module:topR|mux2entradas:mux2e"
+ 21. Port Connectivity Checks: "top_Ram_module:topR|write_mem:escribir_memoria"
+ 22. Port Connectivity Checks: "top_Ram_module:topR|counter:contador"
+ 23. Port Connectivity Checks: "top_Ram_module:topR|RAM2:ram"
+ 24. Port Connectivity Checks: "top_Ram_module:topR"
+ 25. Post-Synthesis Netlist Statistics for Top Partition
+ 26. Elapsed Time Per Partition
+ 27. Analysis & Synthesis Messages
+ 28. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -37,67 +57,36 @@ https://fpgasoftware.intel.com/eula.
 
 
 
-+-----------------------------------------------------------------------------+
-; Analysis & Elaboration Summary                                              ;
-+-------------------------------+---------------------------------------------+
-; Analysis & Elaboration Status ; Successful - Wed Nov 22 00:05:04 2023       ;
-; Quartus Prime Version         ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
-; Revision Name                 ; ProyectoTDD                                 ;
-; Top-level Entity Name         ; ALU                                         ;
-; Family                        ; Cyclone V                                   ;
-; Logic utilization (in ALMs)   ; N/A until Partition Merge                   ;
-; Total registers               ; N/A until Partition Merge                   ;
-; Total pins                    ; N/A until Partition Merge                   ;
-; Total virtual pins            ; N/A until Partition Merge                   ;
-; Total block memory bits       ; N/A until Partition Merge                   ;
-; Total PLLs                    ; N/A until Partition Merge                   ;
-; Total DLLs                    ; N/A until Partition Merge                   ;
-+-------------------------------+---------------------------------------------+
-
-
-+------------------------------------------+
-; Parallel Compilation                     ;
-+----------------------------+-------------+
-; Processors                 ; Number      ;
-+----------------------------+-------------+
-; Number detected on machine ; 8           ;
-; Maximum allowed            ; 4           ;
-;                            ;             ;
-; Average used               ; 1.00        ;
-; Maximum used               ; 1           ;
-;                            ;             ;
-; Usage by Processor         ; % Time Used ;
-;     Processor 1            ; 100.0%      ;
-+----------------------------+-------------+
-
-
-+---------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: Top-level Entity: |ALU ;
-+----------------+-------+--------------------------------------------+
-; Parameter Name ; Value ; Type                                       ;
-+----------------+-------+--------------------------------------------+
-; N              ; 4     ; Signed Integer                             ;
-+----------------+-------+--------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+-----------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: AluAritmetic:arithmetics ;
-+----------------+-------+----------------------------------------------+
-; Parameter Name ; Value ; Type                                         ;
-+----------------+-------+----------------------------------------------+
-; N              ; 4     ; Signed Integer                               ;
-+----------------+-------+----------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
++-------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                  ;
++---------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status     ; Successful - Wed Nov 22 01:26:16 2023       ;
+; Quartus Prime Version           ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
+; Revision Name                   ; ProyectoTDD                                 ;
+; Top-level Entity Name           ; main                                        ;
+; Family                          ; Cyclone V                                   ;
+; Logic utilization (in ALMs)     ; N/A                                         ;
+; Total registers                 ; 38                                          ;
+; Total pins                      ; 86                                          ;
+; Total virtual pins              ; 0                                           ;
+; Total block memory bits         ; 8,192                                       ;
+; Total DSP Blocks                ; 0                                           ;
+; Total HSSI RX PCSs              ; 0                                           ;
+; Total HSSI PMA RX Deserializers ; 0                                           ;
+; Total HSSI TX PCSs              ; 0                                           ;
+; Total HSSI PMA TX Serializers   ; 0                                           ;
+; Total PLLs                      ; 0                                           ;
+; Total DLLs                      ; 0                                           ;
++---------------------------------+---------------------------------------------+
 
 
 +---------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Elaboration Settings                                                                                           ;
+; Analysis & Synthesis Settings                                                                                             ;
 +---------------------------------------------------------------------------------+--------------------+--------------------+
 ; Option                                                                          ; Setting            ; Default Value      ;
 +---------------------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                                          ; 5CSEMA5F31C6       ;                    ;
-; Top-level entity name                                                           ; ALU                ; ProyectoTDD        ;
+; Top-level entity name                                                           ; main               ; ProyectoTDD        ;
 ; Family name                                                                     ; Cyclone V          ; Cyclone V          ;
 ; Use smart compilation                                                           ; Off                ; Off                ;
 ; Enable parallel Assembler and Timing Analyzer during compilation                ; On                 ; On                 ;
@@ -178,14 +167,409 @@ Note: In order to hide this table in the UI and the text report file, please set
 +---------------------------------------------------------------------------------+--------------------+--------------------+
 
 
-+---------------------------------+
-; Analysis & Elaboration Messages ;
-+---------------------------------+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 4           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 4           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processor 2            ;   0.0%      ;
+;     Processors 3-4         ;   0.0%      ;
++----------------------------+-------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                       ;
++----------------------------------+-----------------+-----------------------------------+-----------------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                         ; File Name with Absolute Path                                                                              ; Library ;
++----------------------------------+-----------------+-----------------------------------+-----------------------------------------------------------------------------------------------------------+---------+
+; mux2entradas.sv                  ; yes             ; User SystemVerilog HDL File       ; C:/Users/maxga/OneDrive/Documentos/TDD_Labs2/ylopez_mgarro_digital_design_lab_2023/mux2entradas.sv        ;         ;
+; hhclock.sv                       ; yes             ; User SystemVerilog HDL File       ; C:/Users/maxga/OneDrive/Documentos/TDD_Labs2/ylopez_mgarro_digital_design_lab_2023/hhclock.sv             ;         ;
+; write_mem.sv                     ; yes             ; User SystemVerilog HDL File       ; C:/Users/maxga/OneDrive/Documentos/TDD_Labs2/ylopez_mgarro_digital_design_lab_2023/write_mem.sv           ;         ;
+; ram_data2.mif                    ; yes             ; User Memory Initialization File   ; C:/Users/maxga/OneDrive/Documentos/TDD_Labs2/ylopez_mgarro_digital_design_lab_2023/ram_data2.mif          ;         ;
+; counter.sv                       ; yes             ; User SystemVerilog HDL File       ; C:/Users/maxga/OneDrive/Documentos/TDD_Labs2/ylopez_mgarro_digital_design_lab_2023/counter.sv             ;         ;
+; main.sv                          ; yes             ; User SystemVerilog HDL File       ; C:/Users/maxga/OneDrive/Documentos/TDD_Labs2/ylopez_mgarro_digital_design_lab_2023/main.sv                ;         ;
+; top_Ram_module.sv                ; yes             ; User SystemVerilog HDL File       ; C:/Users/maxga/OneDrive/Documentos/TDD_Labs2/ylopez_mgarro_digital_design_lab_2023/top_Ram_module.sv      ;         ;
+; generate_graphic.sv              ; yes             ; User SystemVerilog HDL File       ; C:/Users/maxga/OneDrive/Documentos/TDD_Labs2/ylopez_mgarro_digital_design_lab_2023/generate_graphic.sv    ;         ;
+; generate_rectangle.sv            ; yes             ; User SystemVerilog HDL File       ; C:/Users/maxga/OneDrive/Documentos/TDD_Labs2/ylopez_mgarro_digital_design_lab_2023/generate_rectangle.sv  ;         ;
+; pll.sv                           ; yes             ; User SystemVerilog HDL File       ; C:/Users/maxga/OneDrive/Documentos/TDD_Labs2/ylopez_mgarro_digital_design_lab_2023/pll.sv                 ;         ;
+; vgaController.sv                 ; yes             ; User SystemVerilog HDL File       ; C:/Users/maxga/OneDrive/Documentos/TDD_Labs2/ylopez_mgarro_digital_design_lab_2023/vgaController.sv       ;         ;
+; vga_top.sv                       ; yes             ; User SystemVerilog HDL File       ; C:/Users/maxga/OneDrive/Documentos/TDD_Labs2/ylopez_mgarro_digital_design_lab_2023/vga_top.sv             ;         ;
+; ram2.v                           ; yes             ; Auto-Found Wizard-Generated File  ; C:/Users/maxga/OneDrive/Documentos/TDD_Labs2/ylopez_mgarro_digital_design_lab_2023/ram2.v                 ;         ;
+; altsyncram.tdf                   ; yes             ; Megafunction                      ; c:/users/maxga/fpga/quartus/libraries/megafunctions/altsyncram.tdf                                        ;         ;
+; stratix_ram_block.inc            ; yes             ; Megafunction                      ; c:/users/maxga/fpga/quartus/libraries/megafunctions/stratix_ram_block.inc                                 ;         ;
+; lpm_mux.inc                      ; yes             ; Megafunction                      ; c:/users/maxga/fpga/quartus/libraries/megafunctions/lpm_mux.inc                                           ;         ;
+; lpm_decode.inc                   ; yes             ; Megafunction                      ; c:/users/maxga/fpga/quartus/libraries/megafunctions/lpm_decode.inc                                        ;         ;
+; aglobal201.inc                   ; yes             ; Megafunction                      ; c:/users/maxga/fpga/quartus/libraries/megafunctions/aglobal201.inc                                        ;         ;
+; a_rdenreg.inc                    ; yes             ; Megafunction                      ; c:/users/maxga/fpga/quartus/libraries/megafunctions/a_rdenreg.inc                                         ;         ;
+; altrom.inc                       ; yes             ; Megafunction                      ; c:/users/maxga/fpga/quartus/libraries/megafunctions/altrom.inc                                            ;         ;
+; altram.inc                       ; yes             ; Megafunction                      ; c:/users/maxga/fpga/quartus/libraries/megafunctions/altram.inc                                            ;         ;
+; altdpram.inc                     ; yes             ; Megafunction                      ; c:/users/maxga/fpga/quartus/libraries/megafunctions/altdpram.inc                                          ;         ;
+; db/altsyncram_jqo1.tdf           ; yes             ; Auto-Generated Megafunction       ; C:/Users/maxga/OneDrive/Documentos/TDD_Labs2/ylopez_mgarro_digital_design_lab_2023/db/altsyncram_jqo1.tdf ;         ;
+; db/decode_8la.tdf                ; yes             ; Auto-Generated Megafunction       ; C:/Users/maxga/OneDrive/Documentos/TDD_Labs2/ylopez_mgarro_digital_design_lab_2023/db/decode_8la.tdf      ;         ;
+; db/decode_11a.tdf                ; yes             ; Auto-Generated Megafunction       ; C:/Users/maxga/OneDrive/Documentos/TDD_Labs2/ylopez_mgarro_digital_design_lab_2023/db/decode_11a.tdf      ;         ;
+; db/mux_5hb.tdf                   ; yes             ; Auto-Generated Megafunction       ; C:/Users/maxga/OneDrive/Documentos/TDD_Labs2/ylopez_mgarro_digital_design_lab_2023/db/mux_5hb.tdf         ;         ;
++----------------------------------+-----------------+-----------------------------------+-----------------------------------------------------------------------------------------------------------+---------+
+
+
++-------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                                               ;
++---------------------------------------------+---------------------------------------------+
+; Resource                                    ; Usage                                       ;
++---------------------------------------------+---------------------------------------------+
+; Estimate of Logic utilization (ALMs needed) ; 45                                          ;
+;                                             ;                                             ;
+; Combinational ALUT usage for logic          ; 76                                          ;
+;     -- 7 input functions                    ; 0                                           ;
+;     -- 6 input functions                    ; 13                                          ;
+;     -- 5 input functions                    ; 10                                          ;
+;     -- 4 input functions                    ; 4                                           ;
+;     -- <=3 input functions                  ; 49                                          ;
+;                                             ;                                             ;
+; Dedicated logic registers                   ; 38                                          ;
+;                                             ;                                             ;
+; I/O pins                                    ; 86                                          ;
+; Total MLAB memory bits                      ; 0                                           ;
+; Total block memory bits                     ; 8192                                        ;
+;                                             ;                                             ;
+; Total DSP Blocks                            ; 0                                           ;
+;                                             ;                                             ;
+; Maximum fan-out node                        ; top_Ram_module:topR|hhclock:hhclock|divider ;
+; Maximum fan-out                             ; 49                                          ;
+; Total fan-out                               ; 861                                         ;
+; Average fan-out                             ; 2.71                                        ;
++---------------------------------------------+---------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                           ;
++----------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------------------------------------------------------------------------+--------------------+--------------+
+; Compilation Hierarchy Node                   ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                               ; Entity Name        ; Library Name ;
++----------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------------------------------------------------------------------------+--------------------+--------------+
+; |main                                        ; 76 (1)              ; 38 (0)                    ; 8192              ; 0          ; 86   ; 0            ; |main                                                                                             ; main               ; work         ;
+;    |top_Ram_module:topR|                     ; 33 (0)              ; 17 (0)                    ; 8192              ; 0          ; 0    ; 0            ; |main|top_Ram_module:topR                                                                         ; top_Ram_module     ; work         ;
+;       |RAM2:ram|                             ; 0 (0)               ; 0 (0)                     ; 8192              ; 0          ; 0    ; 0            ; |main|top_Ram_module:topR|RAM2:ram                                                                ; RAM2               ; work         ;
+;          |altsyncram:altsyncram_component|   ; 0 (0)               ; 0 (0)                     ; 8192              ; 0          ; 0    ; 0            ; |main|top_Ram_module:topR|RAM2:ram|altsyncram:altsyncram_component                                ; altsyncram         ; work         ;
+;             |altsyncram_jqo1:auto_generated| ; 0 (0)               ; 0 (0)                     ; 8192              ; 0          ; 0    ; 0            ; |main|top_Ram_module:topR|RAM2:ram|altsyncram:altsyncram_component|altsyncram_jqo1:auto_generated ; altsyncram_jqo1    ; work         ;
+;       |counter:contador|                     ; 21 (21)             ; 16 (16)                   ; 0                 ; 0          ; 0    ; 0            ; |main|top_Ram_module:topR|counter:contador                                                        ; counter            ; work         ;
+;       |hhclock:hhclock|                      ; 1 (1)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |main|top_Ram_module:topR|hhclock:hhclock                                                         ; hhclock            ; work         ;
+;       |mux2entradas:mux2e|                   ; 8 (8)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |main|top_Ram_module:topR|mux2entradas:mux2e                                                      ; mux2entradas       ; work         ;
+;       |write_mem:escribir_memoria|           ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |main|top_Ram_module:topR|write_mem:escribir_memoria                                              ; write_mem          ; work         ;
+;    |vga_top:vgat|                            ; 42 (0)              ; 21 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |main|vga_top:vgat                                                                                ; vga_top            ; work         ;
+;       |generate_graphic:generar_g|           ; 11 (8)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |main|vga_top:vgat|generate_graphic:generar_g                                                     ; generate_graphic   ; work         ;
+;          |generate_rectangle:rectImage|      ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |main|vga_top:vgat|generate_graphic:generar_g|generate_rectangle:rectImage                        ; generate_rectangle ; work         ;
+;       |pll:vgapll|                           ; 1 (1)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |main|vga_top:vgat|pll:vgapll                                                                     ; pll                ; work         ;
+;       |vgaController:vgaCont|                ; 30 (30)             ; 20 (20)                   ; 0                 ; 0          ; 0    ; 0            ; |main|vga_top:vgat|vgaController:vgaCont                                                          ; vgaController      ; work         ;
++----------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------------------------------------------------------------------------+--------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis RAM Summary                                                                                                                                                                                 ;
++--------------------------------------------------------------------------------------------------------+------+-------------+--------------+--------------+--------------+--------------+--------+---------------+
+; Name                                                                                                   ; Type ; Mode        ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size   ; MIF           ;
++--------------------------------------------------------------------------------------------------------+------+-------------+--------------+--------------+--------------+--------------+--------+---------------+
+; top_Ram_module:topR|RAM2:ram|altsyncram:altsyncram_component|altsyncram_jqo1:auto_generated|ALTSYNCRAM ; AUTO ; Single Port ; 30002        ; 32           ; --           ; --           ; 960064 ; ram_data2.mif ;
++--------------------------------------------------------------------------------------------------------+------+-------------+--------------+--------------+--------------+--------------+--------+---------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                                                                     ;
++--------------------------------------------------------+-------------------------------------------------------+------------------------+
+; Latch Name                                             ; Latch Enable Signal                                   ; Free of Timing Hazards ;
++--------------------------------------------------------+-------------------------------------------------------+------------------------+
+; top_Ram_module:topR|write_mem:escribir_memoria|data[0] ; top_Ram_module:topR|write_mem:escribir_memoria|enable ; yes                    ;
+; top_Ram_module:topR|write_mem:escribir_memoria|data[1] ; top_Ram_module:topR|write_mem:escribir_memoria|enable ; yes                    ;
+; Number of user-specified and inferred latches = 2      ;                                                       ;                        ;
++--------------------------------------------------------+-------------------------------------------------------+------------------------+
+Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                                                                      ;
++----------------------------------------------------------------------------------------------------------------+----------------------------------------+
+; Register name                                                                                                  ; Reason for Removal                     ;
++----------------------------------------------------------------------------------------------------------------+----------------------------------------+
+; top_Ram_module:topR|RAM2:ram|altsyncram:altsyncram_component|altsyncram_jqo1:auto_generated|address_reg_a[0,1] ; Stuck at GND due to stuck port data_in ;
+; Total Number of Removed Registers = 2                                                                          ;                                        ;
++----------------------------------------------------------------------------------------------------------------+----------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 38    ;
+; Number of registers using Synchronous Clear  ; 36    ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 10    ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                         ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                               ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------+
+; 3:1                ; 16 bits   ; 32 LEs        ; 0 LEs                ; 32 LEs                 ; Yes        ; |main|top_Ram_module:topR|counter:contador|memAddress[7] ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------+
+; Source assignments for top_Ram_module:topR|RAM2:ram|altsyncram:altsyncram_component|altsyncram_jqo1:auto_generated ;
++---------------------------------+--------------------+------+------------------------------------------------------+
+; Assignment                      ; Value              ; From ; To                                                   ;
++---------------------------------+--------------------+------+------------------------------------------------------+
+; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                                    ;
++---------------------------------+--------------------+------+------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: top_Ram_module:topR|RAM2:ram|altsyncram:altsyncram_component ;
++------------------------------------+----------------------+-----------------------------------------------+
+; Parameter Name                     ; Value                ; Type                                          ;
++------------------------------------+----------------------+-----------------------------------------------+
+; BYTE_SIZE_BLOCK                    ; 8                    ; Untyped                                       ;
+; AUTO_CARRY_CHAINS                  ; ON                   ; AUTO_CARRY                                    ;
+; IGNORE_CARRY_BUFFERS               ; OFF                  ; IGNORE_CARRY                                  ;
+; AUTO_CASCADE_CHAINS                ; ON                   ; AUTO_CASCADE                                  ;
+; IGNORE_CASCADE_BUFFERS             ; OFF                  ; IGNORE_CASCADE                                ;
+; WIDTH_BYTEENA                      ; 1                    ; Untyped                                       ;
+; OPERATION_MODE                     ; SINGLE_PORT          ; Untyped                                       ;
+; WIDTH_A                            ; 32                   ; Signed Integer                                ;
+; WIDTHAD_A                          ; 15                   ; Signed Integer                                ;
+; NUMWORDS_A                         ; 30002                ; Signed Integer                                ;
+; OUTDATA_REG_A                      ; UNREGISTERED         ; Untyped                                       ;
+; ADDRESS_ACLR_A                     ; NONE                 ; Untyped                                       ;
+; OUTDATA_ACLR_A                     ; NONE                 ; Untyped                                       ;
+; WRCONTROL_ACLR_A                   ; NONE                 ; Untyped                                       ;
+; INDATA_ACLR_A                      ; NONE                 ; Untyped                                       ;
+; BYTEENA_ACLR_A                     ; NONE                 ; Untyped                                       ;
+; WIDTH_B                            ; 1                    ; Untyped                                       ;
+; WIDTHAD_B                          ; 1                    ; Untyped                                       ;
+; NUMWORDS_B                         ; 1                    ; Untyped                                       ;
+; INDATA_REG_B                       ; CLOCK1               ; Untyped                                       ;
+; WRCONTROL_WRADDRESS_REG_B          ; CLOCK1               ; Untyped                                       ;
+; RDCONTROL_REG_B                    ; CLOCK1               ; Untyped                                       ;
+; ADDRESS_REG_B                      ; CLOCK1               ; Untyped                                       ;
+; OUTDATA_REG_B                      ; UNREGISTERED         ; Untyped                                       ;
+; BYTEENA_REG_B                      ; CLOCK1               ; Untyped                                       ;
+; INDATA_ACLR_B                      ; NONE                 ; Untyped                                       ;
+; WRCONTROL_ACLR_B                   ; NONE                 ; Untyped                                       ;
+; ADDRESS_ACLR_B                     ; NONE                 ; Untyped                                       ;
+; OUTDATA_ACLR_B                     ; NONE                 ; Untyped                                       ;
+; RDCONTROL_ACLR_B                   ; NONE                 ; Untyped                                       ;
+; BYTEENA_ACLR_B                     ; NONE                 ; Untyped                                       ;
+; WIDTH_BYTEENA_A                    ; 1                    ; Signed Integer                                ;
+; WIDTH_BYTEENA_B                    ; 1                    ; Untyped                                       ;
+; RAM_BLOCK_TYPE                     ; AUTO                 ; Untyped                                       ;
+; BYTE_SIZE                          ; 8                    ; Untyped                                       ;
+; READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE            ; Untyped                                       ;
+; READ_DURING_WRITE_MODE_PORT_A      ; NEW_DATA_NO_NBE_READ ; Untyped                                       ;
+; READ_DURING_WRITE_MODE_PORT_B      ; NEW_DATA_NO_NBE_READ ; Untyped                                       ;
+; INIT_FILE                          ; ram_data2.mif        ; Untyped                                       ;
+; INIT_FILE_LAYOUT                   ; PORT_A               ; Untyped                                       ;
+; MAXIMUM_DEPTH                      ; 0                    ; Untyped                                       ;
+; CLOCK_ENABLE_INPUT_A               ; BYPASS               ; Untyped                                       ;
+; CLOCK_ENABLE_INPUT_B               ; NORMAL               ; Untyped                                       ;
+; CLOCK_ENABLE_OUTPUT_A              ; BYPASS               ; Untyped                                       ;
+; CLOCK_ENABLE_OUTPUT_B              ; NORMAL               ; Untyped                                       ;
+; CLOCK_ENABLE_CORE_A                ; USE_INPUT_CLKEN      ; Untyped                                       ;
+; CLOCK_ENABLE_CORE_B                ; USE_INPUT_CLKEN      ; Untyped                                       ;
+; ENABLE_ECC                         ; FALSE                ; Untyped                                       ;
+; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                ; Untyped                                       ;
+; WIDTH_ECCSTATUS                    ; 3                    ; Untyped                                       ;
+; DEVICE_FAMILY                      ; Cyclone V            ; Untyped                                       ;
+; CBXI_PARAMETER                     ; altsyncram_jqo1      ; Untyped                                       ;
++------------------------------------+----------------------+-----------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: top_Ram_module:topR|mux2entradas:mux2e ;
++----------------+-------+------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                       ;
++----------------+-------+------------------------------------------------------------+
+; WIDTH          ; 8     ; Signed Integer                                             ;
++----------------+-------+------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: vga_top:vgat|vgaController:vgaCont ;
++----------------+------------+---------------------------------------------------+
+; Parameter Name ; Value      ; Type                                              ;
++----------------+------------+---------------------------------------------------+
+; HACTIVE        ; 1010000000 ; Unsigned Binary                                   ;
+; HFP            ; 0000010000 ; Unsigned Binary                                   ;
+; HSYN           ; 0001100000 ; Unsigned Binary                                   ;
+; HBP            ; 0000110000 ; Unsigned Binary                                   ;
+; HMAX           ; 1100100000 ; Unsigned Binary                                   ;
+; VBP            ; 0000100000 ; Unsigned Binary                                   ;
+; VACTIVE        ; 0111100000 ; Unsigned Binary                                   ;
+; VFP            ; 0000001011 ; Unsigned Binary                                   ;
+; VSYN           ; 0000000010 ; Unsigned Binary                                   ;
+; VMAX           ; 1000001101 ; Unsigned Binary                                   ;
++----------------+------------+---------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------------------+
+; altsyncram Parameter Settings by Entity Instance                                                         ;
++-------------------------------------------+--------------------------------------------------------------+
+; Name                                      ; Value                                                        ;
++-------------------------------------------+--------------------------------------------------------------+
+; Number of entity instances                ; 1                                                            ;
+; Entity Instance                           ; top_Ram_module:topR|RAM2:ram|altsyncram:altsyncram_component ;
+;     -- OPERATION_MODE                     ; SINGLE_PORT                                                  ;
+;     -- WIDTH_A                            ; 32                                                           ;
+;     -- NUMWORDS_A                         ; 30002                                                        ;
+;     -- OUTDATA_REG_A                      ; UNREGISTERED                                                 ;
+;     -- WIDTH_B                            ; 1                                                            ;
+;     -- NUMWORDS_B                         ; 1                                                            ;
+;     -- ADDRESS_REG_B                      ; CLOCK1                                                       ;
+;     -- OUTDATA_REG_B                      ; UNREGISTERED                                                 ;
+;     -- RAM_BLOCK_TYPE                     ; AUTO                                                         ;
+;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                                                    ;
++-------------------------------------------+--------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "vga_top:vgat|generate_graphic:generar_g|generate_rectangle:rectImage"                                                                                                                      ;
++--------------+-------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port         ; Type  ; Severity ; Details                                                                                                                                                                             ;
++--------------+-------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; left         ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (10 bits) it drives.  The 22 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; left[9..0]   ; Input ; Info     ; Stuck at GND                                                                                                                                                                        ;
+; top          ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (10 bits) it drives.  The 22 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; top[9..0]    ; Input ; Info     ; Stuck at GND                                                                                                                                                                        ;
+; right[6..5]  ; Input ; Info     ; Stuck at VCC                                                                                                                                                                        ;
+; right[9..7]  ; Input ; Info     ; Stuck at GND                                                                                                                                                                        ;
+; right[4..3]  ; Input ; Info     ; Stuck at GND                                                                                                                                                                        ;
+; right[1..0]  ; Input ; Info     ; Stuck at GND                                                                                                                                                                        ;
+; right[2]     ; Input ; Info     ; Stuck at VCC                                                                                                                                                                        ;
+; bottom[6..5] ; Input ; Info     ; Stuck at VCC                                                                                                                                                                        ;
+; bottom[9..7] ; Input ; Info     ; Stuck at GND                                                                                                                                                                        ;
+; bottom[4..3] ; Input ; Info     ; Stuck at GND                                                                                                                                                                        ;
+; bottom[1..0] ; Input ; Info     ; Stuck at GND                                                                                                                                                                        ;
+; bottom[2]    ; Input ; Info     ; Stuck at VCC                                                                                                                                                                        ;
++--------------+-------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "vga_top:vgat"                                                                                                                                                                         ;
++----------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port     ; Type  ; Severity ; Details                                                                                                                                                                            ;
++----------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; ram_data ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (8 bits) it drives.  The 24 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
++----------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "top_Ram_module:topR|mux2entradas:mux2e"                                                                                                                                           ;
++------+--------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                                                                                                                           ;
++------+--------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; d0   ; Input  ; Warning  ; Input port expression (16 bits) is wider than the input port (8 bits) it drives.  The 8 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; d1   ; Input  ; Warning  ; Input port expression (16 bits) is wider than the input port (8 bits) it drives.  The 8 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; y    ; Output ; Warning  ; Output or bidir port (8 bits) is smaller than the port expression (16 bits) it drives.  The 8 most-significant bit(s) in the port expression will be connected to GND.            ;
++------+--------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "top_Ram_module:topR|write_mem:escribir_memoria"                                                                                    ;
++-------------+--------+----------+-----------------------------------------------------------------------------------------------------------------------------+
+; Port        ; Type   ; Severity ; Details                                                                                                                     ;
++-------------+--------+----------+-----------------------------------------------------------------------------------------------------------------------------+
+; addr        ; Output ; Warning  ; Output or bidir port (32 bits) is wider than the port expression (16 bits) it drives; bit(s) "addr[31..16]" have no fanouts ;
+; addr[15..8] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                         ;
++-------------+--------+----------+-----------------------------------------------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "top_Ram_module:topR|counter:contador"                                                       ;
++--------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port         ; Type   ; Severity ; Details                                                                             ;
++--------------+--------+----------+-------------------------------------------------------------------------------------+
+; count[15..8] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++--------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "top_Ram_module:topR|RAM2:ram"                                                                                                                                                        ;
++---------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port    ; Type  ; Severity ; Details                                                                                                                                                                            ;
++---------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; address ; Input ; Warning  ; Input port expression (16 bits) is wider than the input port (15 bits) it drives.  The 1 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
++---------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "top_Ram_module:topR"                                                                   ;
++---------+--------+----------+-------------------------------------------------------------------------------------+
+; Port    ; Type   ; Severity ; Details                                                                             ;
++---------+--------+----------+-------------------------------------------------------------------------------------+
+; switch  ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; address ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++---------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; arriav_ff             ; 38                          ;
+;     ENA SCLR          ; 10                          ;
+;     SCLR              ; 26                          ;
+;     plain             ; 2                           ;
+; arriav_lcell_comb     ; 77                          ;
+;     arith             ; 36                          ;
+;         1 data inputs ; 36                          ;
+;     normal            ; 41                          ;
+;         0 data inputs ; 1                           ;
+;         1 data inputs ; 3                           ;
+;         2 data inputs ; 5                           ;
+;         3 data inputs ; 5                           ;
+;         4 data inputs ; 4                           ;
+;         5 data inputs ; 10                          ;
+;         6 data inputs ; 13                          ;
+; boundary_port         ; 86                          ;
+; stratixv_ram_block    ; 32                          ;
+;                       ;                             ;
+; Max LUT depth         ; 3.40                        ;
+; Average LUT depth     ; 2.03                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:00     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
 Info: *******************************************************************
-Info: Running Quartus Prime Analysis & Elaboration
+Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
-    Info: Processing started: Wed Nov 22 00:04:52 2023
-Info: Command: quartus_map --read_settings_files=on --write_settings_files=off ProyectoTDD -c ProyectoTDD --analysis_and_elaboration
+    Info: Processing started: Wed Nov 22 01:25:59 2023
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off ProyectoTDD -c ProyectoTDD
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file alu.sv
@@ -224,8 +608,6 @@ Info (12021): Found 1 design units, including 1 entities, in source file condlog
     Info (12023): Found entity 1: condlogic File: C:/Users/maxga/OneDrive/Documentos/TDD_Labs2/ylopez_mgarro_digital_design_lab_2023/condlogic.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file condcheck.sv
     Info (12023): Found entity 1: condcheck File: C:/Users/maxga/OneDrive/Documentos/TDD_Labs2/ylopez_mgarro_digital_design_lab_2023/condcheck.sv Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file ram2.v
-    Info (12023): Found entity 1: RAM2 File: C:/Users/maxga/OneDrive/Documentos/TDD_Labs2/ylopez_mgarro_digital_design_lab_2023/RAM2.v Line: 40
 Info (12021): Found 1 design units, including 1 entities, in source file dmem.sv
     Info (12023): Found entity 1: dmem File: C:/Users/maxga/OneDrive/Documentos/TDD_Labs2/ylopez_mgarro_digital_design_lab_2023/dmem.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file imem.sv
@@ -243,7 +625,7 @@ Info (12021): Found 1 design units, including 1 entities, in source file arm.sv
 Info (12021): Found 1 design units, including 1 entities, in source file main.sv
     Info (12023): Found entity 1: main File: C:/Users/maxga/OneDrive/Documentos/TDD_Labs2/ylopez_mgarro_digital_design_lab_2023/main.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file main_tb.sv
-    Info (12023): Found entity 1: main_tb File: C:/Users/maxga/OneDrive/Documentos/TDD_Labs2/ylopez_mgarro_digital_design_lab_2023/main_tb.sv Line: 1
+    Info (12023): Found entity 1: main_tb File: C:/Users/maxga/OneDrive/Documentos/TDD_Labs2/ylopez_mgarro_digital_design_lab_2023/main_tb.sv Line: 2
 Info (12021): Found 1 design units, including 1 entities, in source file aluaritmetic.sv
     Info (12023): Found entity 1: AluAritmetic File: C:/Users/maxga/OneDrive/Documentos/TDD_Labs2/ylopez_mgarro_digital_design_lab_2023/AluAritmetic.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file comparator.sv
@@ -277,20 +659,257 @@ Info (12021): Found 1 design units, including 1 entities, in source file main_de
     Info (12023): Found entity 1: main_decoder File: C:/Users/maxga/OneDrive/Documentos/TDD_Labs2/ylopez_mgarro_digital_design_lab_2023/main_decoder.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file unidad_control.sv
     Info (12023): Found entity 1: unidad_control File: C:/Users/maxga/OneDrive/Documentos/TDD_Labs2/ylopez_mgarro_digital_design_lab_2023/unidad_control.sv Line: 2
+Info (12021): Found 1 design units, including 1 entities, in source file ram3.v
+    Info (12023): Found entity 1: RAM3 File: C:/Users/maxga/OneDrive/Documentos/TDD_Labs2/ylopez_mgarro_digital_design_lab_2023/RAM3.v Line: 40
+Info (12021): Found 1 design units, including 1 entities, in source file generate_graphic.sv
+    Info (12023): Found entity 1: generate_graphic File: C:/Users/maxga/OneDrive/Documentos/TDD_Labs2/ylopez_mgarro_digital_design_lab_2023/generate_graphic.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file generate_rectangle.sv
+    Info (12023): Found entity 1: generate_rectangle File: C:/Users/maxga/OneDrive/Documentos/TDD_Labs2/ylopez_mgarro_digital_design_lab_2023/generate_rectangle.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file pll.sv
+    Info (12023): Found entity 1: pll File: C:/Users/maxga/OneDrive/Documentos/TDD_Labs2/ylopez_mgarro_digital_design_lab_2023/pll.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file tb_vga.sv
+    Info (12023): Found entity 1: tb_vga File: C:/Users/maxga/OneDrive/Documentos/TDD_Labs2/ylopez_mgarro_digital_design_lab_2023/tb_vga.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file vgacontroller.sv
+    Info (12023): Found entity 1: vgaController File: C:/Users/maxga/OneDrive/Documentos/TDD_Labs2/ylopez_mgarro_digital_design_lab_2023/vgaController.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file vga_top.sv
+    Info (12023): Found entity 1: vga_top File: C:/Users/maxga/OneDrive/Documentos/TDD_Labs2/ylopez_mgarro_digital_design_lab_2023/vga_top.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file videogen.sv
+    Info (12023): Found entity 1: videoGen File: C:/Users/maxga/OneDrive/Documentos/TDD_Labs2/ylopez_mgarro_digital_design_lab_2023/videoGen.sv Line: 1
+Warning (10236): Verilog HDL Implicit Net warning at top_module.sv(13): created implicit net for "rst" File: C:/Users/maxga/OneDrive/Documentos/TDD_Labs2/ylopez_mgarro_digital_design_lab_2023/top_module.sv Line: 13
 Warning (10236): Verilog HDL Implicit Net warning at top_module.sv(13): created implicit net for "addr_cont" File: C:/Users/maxga/OneDrive/Documentos/TDD_Labs2/ylopez_mgarro_digital_design_lab_2023/top_module.sv Line: 13
-Info (12127): Elaborating entity "ALU" for the top level hierarchy
-Info (12128): Elaborating entity "AluAritmetic" for hierarchy "AluAritmetic:arithmetics" File: C:/Users/maxga/OneDrive/Documentos/TDD_Labs2/ylopez_mgarro_digital_design_lab_2023/ALU.sv Line: 22
+Info (12127): Elaborating entity "main" for the top level hierarchy
+Warning (10034): Output port "x" at main.sv(12) has no driver File: C:/Users/maxga/OneDrive/Documentos/TDD_Labs2/ylopez_mgarro_digital_design_lab_2023/main.sv Line: 12
+Warning (10034): Output port "y" at main.sv(15) has no driver File: C:/Users/maxga/OneDrive/Documentos/TDD_Labs2/ylopez_mgarro_digital_design_lab_2023/main.sv Line: 15
+Info (12128): Elaborating entity "top_Ram_module" for hierarchy "top_Ram_module:topR" File: C:/Users/maxga/OneDrive/Documentos/TDD_Labs2/ylopez_mgarro_digital_design_lab_2023/main.sv Line: 25
+Warning (12125): Using design file ram2.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: RAM2 File: C:/Users/maxga/OneDrive/Documentos/TDD_Labs2/ylopez_mgarro_digital_design_lab_2023/ram2.v Line: 40
+Info (12128): Elaborating entity "RAM2" for hierarchy "top_Ram_module:topR|RAM2:ram" File: C:/Users/maxga/OneDrive/Documentos/TDD_Labs2/ylopez_mgarro_digital_design_lab_2023/top_Ram_module.sv Line: 11
+Info (12128): Elaborating entity "altsyncram" for hierarchy "top_Ram_module:topR|RAM2:ram|altsyncram:altsyncram_component" File: C:/Users/maxga/OneDrive/Documentos/TDD_Labs2/ylopez_mgarro_digital_design_lab_2023/RAM2.v Line: 86
+Info (12130): Elaborated megafunction instantiation "top_Ram_module:topR|RAM2:ram|altsyncram:altsyncram_component" File: C:/Users/maxga/OneDrive/Documentos/TDD_Labs2/ylopez_mgarro_digital_design_lab_2023/RAM2.v Line: 86
+Info (12133): Instantiated megafunction "top_Ram_module:topR|RAM2:ram|altsyncram:altsyncram_component" with the following parameter: File: C:/Users/maxga/OneDrive/Documentos/TDD_Labs2/ylopez_mgarro_digital_design_lab_2023/RAM2.v Line: 86
+    Info (12134): Parameter "clock_enable_input_a" = "BYPASS"
+    Info (12134): Parameter "clock_enable_output_a" = "BYPASS"
+    Info (12134): Parameter "init_file" = "ram_data2.mif"
+    Info (12134): Parameter "intended_device_family" = "Cyclone V"
+    Info (12134): Parameter "lpm_hint" = "ENABLE_RUNTIME_MOD=NO"
+    Info (12134): Parameter "lpm_type" = "altsyncram"
+    Info (12134): Parameter "numwords_a" = "30002"
+    Info (12134): Parameter "operation_mode" = "SINGLE_PORT"
+    Info (12134): Parameter "outdata_aclr_a" = "NONE"
+    Info (12134): Parameter "outdata_reg_a" = "UNREGISTERED"
+    Info (12134): Parameter "power_up_uninitialized" = "FALSE"
+    Info (12134): Parameter "read_during_write_mode_port_a" = "NEW_DATA_NO_NBE_READ"
+    Info (12134): Parameter "widthad_a" = "15"
+    Info (12134): Parameter "width_a" = "32"
+    Info (12134): Parameter "width_byteena_a" = "1"
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_jqo1.tdf
+    Info (12023): Found entity 1: altsyncram_jqo1 File: C:/Users/maxga/OneDrive/Documentos/TDD_Labs2/ylopez_mgarro_digital_design_lab_2023/db/altsyncram_jqo1.tdf Line: 34
+Info (12128): Elaborating entity "altsyncram_jqo1" for hierarchy "top_Ram_module:topR|RAM2:ram|altsyncram:altsyncram_component|altsyncram_jqo1:auto_generated" File: c:/users/maxga/fpga/quartus/libraries/megafunctions/altsyncram.tdf Line: 792
+Info (12021): Found 1 design units, including 1 entities, in source file db/decode_8la.tdf
+    Info (12023): Found entity 1: decode_8la File: C:/Users/maxga/OneDrive/Documentos/TDD_Labs2/ylopez_mgarro_digital_design_lab_2023/db/decode_8la.tdf Line: 23
+Info (12128): Elaborating entity "decode_8la" for hierarchy "top_Ram_module:topR|RAM2:ram|altsyncram:altsyncram_component|altsyncram_jqo1:auto_generated|decode_8la:decode3" File: C:/Users/maxga/OneDrive/Documentos/TDD_Labs2/ylopez_mgarro_digital_design_lab_2023/db/altsyncram_jqo1.tdf Line: 44
+Info (12021): Found 1 design units, including 1 entities, in source file db/decode_11a.tdf
+    Info (12023): Found entity 1: decode_11a File: C:/Users/maxga/OneDrive/Documentos/TDD_Labs2/ylopez_mgarro_digital_design_lab_2023/db/decode_11a.tdf Line: 23
+Info (12128): Elaborating entity "decode_11a" for hierarchy "top_Ram_module:topR|RAM2:ram|altsyncram:altsyncram_component|altsyncram_jqo1:auto_generated|decode_11a:rden_decode" File: C:/Users/maxga/OneDrive/Documentos/TDD_Labs2/ylopez_mgarro_digital_design_lab_2023/db/altsyncram_jqo1.tdf Line: 45
+Info (12021): Found 1 design units, including 1 entities, in source file db/mux_5hb.tdf
+    Info (12023): Found entity 1: mux_5hb File: C:/Users/maxga/OneDrive/Documentos/TDD_Labs2/ylopez_mgarro_digital_design_lab_2023/db/mux_5hb.tdf Line: 23
+Info (12128): Elaborating entity "mux_5hb" for hierarchy "top_Ram_module:topR|RAM2:ram|altsyncram:altsyncram_component|altsyncram_jqo1:auto_generated|mux_5hb:mux2" File: C:/Users/maxga/OneDrive/Documentos/TDD_Labs2/ylopez_mgarro_digital_design_lab_2023/db/altsyncram_jqo1.tdf Line: 46
+Info (12128): Elaborating entity "counter" for hierarchy "top_Ram_module:topR|counter:contador" File: C:/Users/maxga/OneDrive/Documentos/TDD_Labs2/ylopez_mgarro_digital_design_lab_2023/top_Ram_module.sv Line: 13
+Warning (10230): Verilog HDL assignment warning at counter.sv(18): truncated value with size 32 to match size of target (16) File: C:/Users/maxga/OneDrive/Documentos/TDD_Labs2/ylopez_mgarro_digital_design_lab_2023/counter.sv Line: 18
+Info (12128): Elaborating entity "write_mem" for hierarchy "top_Ram_module:topR|write_mem:escribir_memoria" File: C:/Users/maxga/OneDrive/Documentos/TDD_Labs2/ylopez_mgarro_digital_design_lab_2023/top_Ram_module.sv Line: 15
+Warning (10240): Verilog HDL Always Construct warning at write_mem.sv(8): inferring latch(es) for variable "data", which holds its previous value in one or more paths through the always construct File: C:/Users/maxga/OneDrive/Documentos/TDD_Labs2/ylopez_mgarro_digital_design_lab_2023/write_mem.sv Line: 8
+Info (10041): Inferred latch for "data[0]" at write_mem.sv(8) File: C:/Users/maxga/OneDrive/Documentos/TDD_Labs2/ylopez_mgarro_digital_design_lab_2023/write_mem.sv Line: 8
+Info (10041): Inferred latch for "data[1]" at write_mem.sv(8) File: C:/Users/maxga/OneDrive/Documentos/TDD_Labs2/ylopez_mgarro_digital_design_lab_2023/write_mem.sv Line: 8
+Info (10041): Inferred latch for "data[2]" at write_mem.sv(8) File: C:/Users/maxga/OneDrive/Documentos/TDD_Labs2/ylopez_mgarro_digital_design_lab_2023/write_mem.sv Line: 8
+Info (10041): Inferred latch for "data[3]" at write_mem.sv(8) File: C:/Users/maxga/OneDrive/Documentos/TDD_Labs2/ylopez_mgarro_digital_design_lab_2023/write_mem.sv Line: 8
+Info (10041): Inferred latch for "data[4]" at write_mem.sv(8) File: C:/Users/maxga/OneDrive/Documentos/TDD_Labs2/ylopez_mgarro_digital_design_lab_2023/write_mem.sv Line: 8
+Info (10041): Inferred latch for "data[5]" at write_mem.sv(8) File: C:/Users/maxga/OneDrive/Documentos/TDD_Labs2/ylopez_mgarro_digital_design_lab_2023/write_mem.sv Line: 8
+Info (10041): Inferred latch for "data[6]" at write_mem.sv(8) File: C:/Users/maxga/OneDrive/Documentos/TDD_Labs2/ylopez_mgarro_digital_design_lab_2023/write_mem.sv Line: 8
+Info (10041): Inferred latch for "data[7]" at write_mem.sv(8) File: C:/Users/maxga/OneDrive/Documentos/TDD_Labs2/ylopez_mgarro_digital_design_lab_2023/write_mem.sv Line: 8
+Info (10041): Inferred latch for "data[8]" at write_mem.sv(8) File: C:/Users/maxga/OneDrive/Documentos/TDD_Labs2/ylopez_mgarro_digital_design_lab_2023/write_mem.sv Line: 8
+Info (10041): Inferred latch for "data[9]" at write_mem.sv(8) File: C:/Users/maxga/OneDrive/Documentos/TDD_Labs2/ylopez_mgarro_digital_design_lab_2023/write_mem.sv Line: 8
+Info (10041): Inferred latch for "data[10]" at write_mem.sv(8) File: C:/Users/maxga/OneDrive/Documentos/TDD_Labs2/ylopez_mgarro_digital_design_lab_2023/write_mem.sv Line: 8
+Info (10041): Inferred latch for "data[11]" at write_mem.sv(8) File: C:/Users/maxga/OneDrive/Documentos/TDD_Labs2/ylopez_mgarro_digital_design_lab_2023/write_mem.sv Line: 8
+Info (10041): Inferred latch for "data[12]" at write_mem.sv(8) File: C:/Users/maxga/OneDrive/Documentos/TDD_Labs2/ylopez_mgarro_digital_design_lab_2023/write_mem.sv Line: 8
+Info (10041): Inferred latch for "data[13]" at write_mem.sv(8) File: C:/Users/maxga/OneDrive/Documentos/TDD_Labs2/ylopez_mgarro_digital_design_lab_2023/write_mem.sv Line: 8
+Info (10041): Inferred latch for "data[14]" at write_mem.sv(8) File: C:/Users/maxga/OneDrive/Documentos/TDD_Labs2/ylopez_mgarro_digital_design_lab_2023/write_mem.sv Line: 8
+Info (10041): Inferred latch for "data[15]" at write_mem.sv(8) File: C:/Users/maxga/OneDrive/Documentos/TDD_Labs2/ylopez_mgarro_digital_design_lab_2023/write_mem.sv Line: 8
+Info (10041): Inferred latch for "data[16]" at write_mem.sv(8) File: C:/Users/maxga/OneDrive/Documentos/TDD_Labs2/ylopez_mgarro_digital_design_lab_2023/write_mem.sv Line: 8
+Info (10041): Inferred latch for "data[17]" at write_mem.sv(8) File: C:/Users/maxga/OneDrive/Documentos/TDD_Labs2/ylopez_mgarro_digital_design_lab_2023/write_mem.sv Line: 8
+Info (10041): Inferred latch for "data[18]" at write_mem.sv(8) File: C:/Users/maxga/OneDrive/Documentos/TDD_Labs2/ylopez_mgarro_digital_design_lab_2023/write_mem.sv Line: 8
+Info (10041): Inferred latch for "data[19]" at write_mem.sv(8) File: C:/Users/maxga/OneDrive/Documentos/TDD_Labs2/ylopez_mgarro_digital_design_lab_2023/write_mem.sv Line: 8
+Info (10041): Inferred latch for "data[20]" at write_mem.sv(8) File: C:/Users/maxga/OneDrive/Documentos/TDD_Labs2/ylopez_mgarro_digital_design_lab_2023/write_mem.sv Line: 8
+Info (10041): Inferred latch for "data[21]" at write_mem.sv(8) File: C:/Users/maxga/OneDrive/Documentos/TDD_Labs2/ylopez_mgarro_digital_design_lab_2023/write_mem.sv Line: 8
+Info (10041): Inferred latch for "data[22]" at write_mem.sv(8) File: C:/Users/maxga/OneDrive/Documentos/TDD_Labs2/ylopez_mgarro_digital_design_lab_2023/write_mem.sv Line: 8
+Info (10041): Inferred latch for "data[23]" at write_mem.sv(8) File: C:/Users/maxga/OneDrive/Documentos/TDD_Labs2/ylopez_mgarro_digital_design_lab_2023/write_mem.sv Line: 8
+Info (10041): Inferred latch for "data[24]" at write_mem.sv(8) File: C:/Users/maxga/OneDrive/Documentos/TDD_Labs2/ylopez_mgarro_digital_design_lab_2023/write_mem.sv Line: 8
+Info (10041): Inferred latch for "data[25]" at write_mem.sv(8) File: C:/Users/maxga/OneDrive/Documentos/TDD_Labs2/ylopez_mgarro_digital_design_lab_2023/write_mem.sv Line: 8
+Info (10041): Inferred latch for "data[26]" at write_mem.sv(8) File: C:/Users/maxga/OneDrive/Documentos/TDD_Labs2/ylopez_mgarro_digital_design_lab_2023/write_mem.sv Line: 8
+Info (10041): Inferred latch for "data[27]" at write_mem.sv(8) File: C:/Users/maxga/OneDrive/Documentos/TDD_Labs2/ylopez_mgarro_digital_design_lab_2023/write_mem.sv Line: 8
+Info (10041): Inferred latch for "data[28]" at write_mem.sv(8) File: C:/Users/maxga/OneDrive/Documentos/TDD_Labs2/ylopez_mgarro_digital_design_lab_2023/write_mem.sv Line: 8
+Info (10041): Inferred latch for "data[29]" at write_mem.sv(8) File: C:/Users/maxga/OneDrive/Documentos/TDD_Labs2/ylopez_mgarro_digital_design_lab_2023/write_mem.sv Line: 8
+Info (10041): Inferred latch for "data[30]" at write_mem.sv(8) File: C:/Users/maxga/OneDrive/Documentos/TDD_Labs2/ylopez_mgarro_digital_design_lab_2023/write_mem.sv Line: 8
+Info (10041): Inferred latch for "data[31]" at write_mem.sv(8) File: C:/Users/maxga/OneDrive/Documentos/TDD_Labs2/ylopez_mgarro_digital_design_lab_2023/write_mem.sv Line: 8
+Info (12128): Elaborating entity "mux2entradas" for hierarchy "top_Ram_module:topR|mux2entradas:mux2e" File: C:/Users/maxga/OneDrive/Documentos/TDD_Labs2/ylopez_mgarro_digital_design_lab_2023/top_Ram_module.sv Line: 17
+Info (12128): Elaborating entity "hhclock" for hierarchy "top_Ram_module:topR|hhclock:hhclock" File: C:/Users/maxga/OneDrive/Documentos/TDD_Labs2/ylopez_mgarro_digital_design_lab_2023/top_Ram_module.sv Line: 19
+Info (12128): Elaborating entity "vga_top" for hierarchy "vga_top:vgat" File: C:/Users/maxga/OneDrive/Documentos/TDD_Labs2/ylopez_mgarro_digital_design_lab_2023/main.sv Line: 27
+Info (12128): Elaborating entity "pll" for hierarchy "vga_top:vgat|pll:vgapll" File: C:/Users/maxga/OneDrive/Documentos/TDD_Labs2/ylopez_mgarro_digital_design_lab_2023/vga_top.sv Line: 13
+Info (12128): Elaborating entity "vgaController" for hierarchy "vga_top:vgat|vgaController:vgaCont" File: C:/Users/maxga/OneDrive/Documentos/TDD_Labs2/ylopez_mgarro_digital_design_lab_2023/vga_top.sv Line: 23
+Info (12128): Elaborating entity "generate_graphic" for hierarchy "vga_top:vgat|generate_graphic:generar_g" File: C:/Users/maxga/OneDrive/Documentos/TDD_Labs2/ylopez_mgarro_digital_design_lab_2023/vga_top.sv Line: 41
+Info (12128): Elaborating entity "generate_rectangle" for hierarchy "vga_top:vgat|generate_graphic:generar_g|generate_rectangle:rectImage" File: C:/Users/maxga/OneDrive/Documentos/TDD_Labs2/ylopez_mgarro_digital_design_lab_2023/generate_graphic.sv Line: 12
+Warning (12011): Net is missing source, defaulting to GND
+    Warning (12110): Net "top_Ram_module:topR|address[15]" is missing source, defaulting to GND File: C:/Users/maxga/OneDrive/Documentos/TDD_Labs2/ylopez_mgarro_digital_design_lab_2023/top_Ram_module.sv Line: 4
+    Warning (12110): Net "top_Ram_module:topR|address[14]" is missing source, defaulting to GND File: C:/Users/maxga/OneDrive/Documentos/TDD_Labs2/ylopez_mgarro_digital_design_lab_2023/top_Ram_module.sv Line: 4
+    Warning (12110): Net "top_Ram_module:topR|address[13]" is missing source, defaulting to GND File: C:/Users/maxga/OneDrive/Documentos/TDD_Labs2/ylopez_mgarro_digital_design_lab_2023/top_Ram_module.sv Line: 4
+    Warning (12110): Net "top_Ram_module:topR|address[12]" is missing source, defaulting to GND File: C:/Users/maxga/OneDrive/Documentos/TDD_Labs2/ylopez_mgarro_digital_design_lab_2023/top_Ram_module.sv Line: 4
+    Warning (12110): Net "top_Ram_module:topR|address[11]" is missing source, defaulting to GND File: C:/Users/maxga/OneDrive/Documentos/TDD_Labs2/ylopez_mgarro_digital_design_lab_2023/top_Ram_module.sv Line: 4
+    Warning (12110): Net "top_Ram_module:topR|address[10]" is missing source, defaulting to GND File: C:/Users/maxga/OneDrive/Documentos/TDD_Labs2/ylopez_mgarro_digital_design_lab_2023/top_Ram_module.sv Line: 4
+    Warning (12110): Net "top_Ram_module:topR|address[9]" is missing source, defaulting to GND File: C:/Users/maxga/OneDrive/Documentos/TDD_Labs2/ylopez_mgarro_digital_design_lab_2023/top_Ram_module.sv Line: 4
+    Warning (12110): Net "top_Ram_module:topR|address[8]" is missing source, defaulting to GND File: C:/Users/maxga/OneDrive/Documentos/TDD_Labs2/ylopez_mgarro_digital_design_lab_2023/top_Ram_module.sv Line: 4
+Warning (14284): Synthesized away the following node(s):
+    Warning (14285): Synthesized away the following RAM node(s):
+        Warning (14320): Synthesized away node "top_Ram_module:topR|RAM2:ram|altsyncram:altsyncram_component|altsyncram_jqo1:auto_generated|ram_block1a32" File: C:/Users/maxga/OneDrive/Documentos/TDD_Labs2/ylopez_mgarro_digital_design_lab_2023/db/altsyncram_jqo1.tdf Line: 815
+        Warning (14320): Synthesized away node "top_Ram_module:topR|RAM2:ram|altsyncram:altsyncram_component|altsyncram_jqo1:auto_generated|ram_block1a33" File: C:/Users/maxga/OneDrive/Documentos/TDD_Labs2/ylopez_mgarro_digital_design_lab_2023/db/altsyncram_jqo1.tdf Line: 839
+        Warning (14320): Synthesized away node "top_Ram_module:topR|RAM2:ram|altsyncram:altsyncram_component|altsyncram_jqo1:auto_generated|ram_block1a34" File: C:/Users/maxga/OneDrive/Documentos/TDD_Labs2/ylopez_mgarro_digital_design_lab_2023/db/altsyncram_jqo1.tdf Line: 863
+        Warning (14320): Synthesized away node "top_Ram_module:topR|RAM2:ram|altsyncram:altsyncram_component|altsyncram_jqo1:auto_generated|ram_block1a35" File: C:/Users/maxga/OneDrive/Documentos/TDD_Labs2/ylopez_mgarro_digital_design_lab_2023/db/altsyncram_jqo1.tdf Line: 887
+        Warning (14320): Synthesized away node "top_Ram_module:topR|RAM2:ram|altsyncram:altsyncram_component|altsyncram_jqo1:auto_generated|ram_block1a36" File: C:/Users/maxga/OneDrive/Documentos/TDD_Labs2/ylopez_mgarro_digital_design_lab_2023/db/altsyncram_jqo1.tdf Line: 911
+        Warning (14320): Synthesized away node "top_Ram_module:topR|RAM2:ram|altsyncram:altsyncram_component|altsyncram_jqo1:auto_generated|ram_block1a37" File: C:/Users/maxga/OneDrive/Documentos/TDD_Labs2/ylopez_mgarro_digital_design_lab_2023/db/altsyncram_jqo1.tdf Line: 935
+        Warning (14320): Synthesized away node "top_Ram_module:topR|RAM2:ram|altsyncram:altsyncram_component|altsyncram_jqo1:auto_generated|ram_block1a38" File: C:/Users/maxga/OneDrive/Documentos/TDD_Labs2/ylopez_mgarro_digital_design_lab_2023/db/altsyncram_jqo1.tdf Line: 959
+        Warning (14320): Synthesized away node "top_Ram_module:topR|RAM2:ram|altsyncram:altsyncram_component|altsyncram_jqo1:auto_generated|ram_block1a39" File: C:/Users/maxga/OneDrive/Documentos/TDD_Labs2/ylopez_mgarro_digital_design_lab_2023/db/altsyncram_jqo1.tdf Line: 983
+        Warning (14320): Synthesized away node "top_Ram_module:topR|RAM2:ram|altsyncram:altsyncram_component|altsyncram_jqo1:auto_generated|ram_block1a40" File: C:/Users/maxga/OneDrive/Documentos/TDD_Labs2/ylopez_mgarro_digital_design_lab_2023/db/altsyncram_jqo1.tdf Line: 1007
+        Warning (14320): Synthesized away node "top_Ram_module:topR|RAM2:ram|altsyncram:altsyncram_component|altsyncram_jqo1:auto_generated|ram_block1a41" File: C:/Users/maxga/OneDrive/Documentos/TDD_Labs2/ylopez_mgarro_digital_design_lab_2023/db/altsyncram_jqo1.tdf Line: 1031
+        Warning (14320): Synthesized away node "top_Ram_module:topR|RAM2:ram|altsyncram:altsyncram_component|altsyncram_jqo1:auto_generated|ram_block1a42" File: C:/Users/maxga/OneDrive/Documentos/TDD_Labs2/ylopez_mgarro_digital_design_lab_2023/db/altsyncram_jqo1.tdf Line: 1055
+        Warning (14320): Synthesized away node "top_Ram_module:topR|RAM2:ram|altsyncram:altsyncram_component|altsyncram_jqo1:auto_generated|ram_block1a43" File: C:/Users/maxga/OneDrive/Documentos/TDD_Labs2/ylopez_mgarro_digital_design_lab_2023/db/altsyncram_jqo1.tdf Line: 1079
+        Warning (14320): Synthesized away node "top_Ram_module:topR|RAM2:ram|altsyncram:altsyncram_component|altsyncram_jqo1:auto_generated|ram_block1a44" File: C:/Users/maxga/OneDrive/Documentos/TDD_Labs2/ylopez_mgarro_digital_design_lab_2023/db/altsyncram_jqo1.tdf Line: 1103
+        Warning (14320): Synthesized away node "top_Ram_module:topR|RAM2:ram|altsyncram:altsyncram_component|altsyncram_jqo1:auto_generated|ram_block1a45" File: C:/Users/maxga/OneDrive/Documentos/TDD_Labs2/ylopez_mgarro_digital_design_lab_2023/db/altsyncram_jqo1.tdf Line: 1127
+        Warning (14320): Synthesized away node "top_Ram_module:topR|RAM2:ram|altsyncram:altsyncram_component|altsyncram_jqo1:auto_generated|ram_block1a46" File: C:/Users/maxga/OneDrive/Documentos/TDD_Labs2/ylopez_mgarro_digital_design_lab_2023/db/altsyncram_jqo1.tdf Line: 1151
+        Warning (14320): Synthesized away node "top_Ram_module:topR|RAM2:ram|altsyncram:altsyncram_component|altsyncram_jqo1:auto_generated|ram_block1a47" File: C:/Users/maxga/OneDrive/Documentos/TDD_Labs2/ylopez_mgarro_digital_design_lab_2023/db/altsyncram_jqo1.tdf Line: 1175
+        Warning (14320): Synthesized away node "top_Ram_module:topR|RAM2:ram|altsyncram:altsyncram_component|altsyncram_jqo1:auto_generated|ram_block1a48" File: C:/Users/maxga/OneDrive/Documentos/TDD_Labs2/ylopez_mgarro_digital_design_lab_2023/db/altsyncram_jqo1.tdf Line: 1199
+        Warning (14320): Synthesized away node "top_Ram_module:topR|RAM2:ram|altsyncram:altsyncram_component|altsyncram_jqo1:auto_generated|ram_block1a49" File: C:/Users/maxga/OneDrive/Documentos/TDD_Labs2/ylopez_mgarro_digital_design_lab_2023/db/altsyncram_jqo1.tdf Line: 1223
+        Warning (14320): Synthesized away node "top_Ram_module:topR|RAM2:ram|altsyncram:altsyncram_component|altsyncram_jqo1:auto_generated|ram_block1a50" File: C:/Users/maxga/OneDrive/Documentos/TDD_Labs2/ylopez_mgarro_digital_design_lab_2023/db/altsyncram_jqo1.tdf Line: 1247
+        Warning (14320): Synthesized away node "top_Ram_module:topR|RAM2:ram|altsyncram:altsyncram_component|altsyncram_jqo1:auto_generated|ram_block1a51" File: C:/Users/maxga/OneDrive/Documentos/TDD_Labs2/ylopez_mgarro_digital_design_lab_2023/db/altsyncram_jqo1.tdf Line: 1271
+        Warning (14320): Synthesized away node "top_Ram_module:topR|RAM2:ram|altsyncram:altsyncram_component|altsyncram_jqo1:auto_generated|ram_block1a52" File: C:/Users/maxga/OneDrive/Documentos/TDD_Labs2/ylopez_mgarro_digital_design_lab_2023/db/altsyncram_jqo1.tdf Line: 1295
+        Warning (14320): Synthesized away node "top_Ram_module:topR|RAM2:ram|altsyncram:altsyncram_component|altsyncram_jqo1:auto_generated|ram_block1a53" File: C:/Users/maxga/OneDrive/Documentos/TDD_Labs2/ylopez_mgarro_digital_design_lab_2023/db/altsyncram_jqo1.tdf Line: 1319
+        Warning (14320): Synthesized away node "top_Ram_module:topR|RAM2:ram|altsyncram:altsyncram_component|altsyncram_jqo1:auto_generated|ram_block1a54" File: C:/Users/maxga/OneDrive/Documentos/TDD_Labs2/ylopez_mgarro_digital_design_lab_2023/db/altsyncram_jqo1.tdf Line: 1343
+        Warning (14320): Synthesized away node "top_Ram_module:topR|RAM2:ram|altsyncram:altsyncram_component|altsyncram_jqo1:auto_generated|ram_block1a55" File: C:/Users/maxga/OneDrive/Documentos/TDD_Labs2/ylopez_mgarro_digital_design_lab_2023/db/altsyncram_jqo1.tdf Line: 1367
+        Warning (14320): Synthesized away node "top_Ram_module:topR|RAM2:ram|altsyncram:altsyncram_component|altsyncram_jqo1:auto_generated|ram_block1a56" File: C:/Users/maxga/OneDrive/Documentos/TDD_Labs2/ylopez_mgarro_digital_design_lab_2023/db/altsyncram_jqo1.tdf Line: 1391
+        Warning (14320): Synthesized away node "top_Ram_module:topR|RAM2:ram|altsyncram:altsyncram_component|altsyncram_jqo1:auto_generated|ram_block1a57" File: C:/Users/maxga/OneDrive/Documentos/TDD_Labs2/ylopez_mgarro_digital_design_lab_2023/db/altsyncram_jqo1.tdf Line: 1415
+        Warning (14320): Synthesized away node "top_Ram_module:topR|RAM2:ram|altsyncram:altsyncram_component|altsyncram_jqo1:auto_generated|ram_block1a58" File: C:/Users/maxga/OneDrive/Documentos/TDD_Labs2/ylopez_mgarro_digital_design_lab_2023/db/altsyncram_jqo1.tdf Line: 1439
+        Warning (14320): Synthesized away node "top_Ram_module:topR|RAM2:ram|altsyncram:altsyncram_component|altsyncram_jqo1:auto_generated|ram_block1a59" File: C:/Users/maxga/OneDrive/Documentos/TDD_Labs2/ylopez_mgarro_digital_design_lab_2023/db/altsyncram_jqo1.tdf Line: 1463
+        Warning (14320): Synthesized away node "top_Ram_module:topR|RAM2:ram|altsyncram:altsyncram_component|altsyncram_jqo1:auto_generated|ram_block1a60" File: C:/Users/maxga/OneDrive/Documentos/TDD_Labs2/ylopez_mgarro_digital_design_lab_2023/db/altsyncram_jqo1.tdf Line: 1487
+        Warning (14320): Synthesized away node "top_Ram_module:topR|RAM2:ram|altsyncram:altsyncram_component|altsyncram_jqo1:auto_generated|ram_block1a61" File: C:/Users/maxga/OneDrive/Documentos/TDD_Labs2/ylopez_mgarro_digital_design_lab_2023/db/altsyncram_jqo1.tdf Line: 1511
+        Warning (14320): Synthesized away node "top_Ram_module:topR|RAM2:ram|altsyncram:altsyncram_component|altsyncram_jqo1:auto_generated|ram_block1a62" File: C:/Users/maxga/OneDrive/Documentos/TDD_Labs2/ylopez_mgarro_digital_design_lab_2023/db/altsyncram_jqo1.tdf Line: 1535
+        Warning (14320): Synthesized away node "top_Ram_module:topR|RAM2:ram|altsyncram:altsyncram_component|altsyncram_jqo1:auto_generated|ram_block1a63" File: C:/Users/maxga/OneDrive/Documentos/TDD_Labs2/ylopez_mgarro_digital_design_lab_2023/db/altsyncram_jqo1.tdf Line: 1559
+        Warning (14320): Synthesized away node "top_Ram_module:topR|RAM2:ram|altsyncram:altsyncram_component|altsyncram_jqo1:auto_generated|ram_block1a64" File: C:/Users/maxga/OneDrive/Documentos/TDD_Labs2/ylopez_mgarro_digital_design_lab_2023/db/altsyncram_jqo1.tdf Line: 1583
+        Warning (14320): Synthesized away node "top_Ram_module:topR|RAM2:ram|altsyncram:altsyncram_component|altsyncram_jqo1:auto_generated|ram_block1a65" File: C:/Users/maxga/OneDrive/Documentos/TDD_Labs2/ylopez_mgarro_digital_design_lab_2023/db/altsyncram_jqo1.tdf Line: 1607
+        Warning (14320): Synthesized away node "top_Ram_module:topR|RAM2:ram|altsyncram:altsyncram_component|altsyncram_jqo1:auto_generated|ram_block1a66" File: C:/Users/maxga/OneDrive/Documentos/TDD_Labs2/ylopez_mgarro_digital_design_lab_2023/db/altsyncram_jqo1.tdf Line: 1631
+        Warning (14320): Synthesized away node "top_Ram_module:topR|RAM2:ram|altsyncram:altsyncram_component|altsyncram_jqo1:auto_generated|ram_block1a67" File: C:/Users/maxga/OneDrive/Documentos/TDD_Labs2/ylopez_mgarro_digital_design_lab_2023/db/altsyncram_jqo1.tdf Line: 1655
+        Warning (14320): Synthesized away node "top_Ram_module:topR|RAM2:ram|altsyncram:altsyncram_component|altsyncram_jqo1:auto_generated|ram_block1a68" File: C:/Users/maxga/OneDrive/Documentos/TDD_Labs2/ylopez_mgarro_digital_design_lab_2023/db/altsyncram_jqo1.tdf Line: 1679
+        Warning (14320): Synthesized away node "top_Ram_module:topR|RAM2:ram|altsyncram:altsyncram_component|altsyncram_jqo1:auto_generated|ram_block1a69" File: C:/Users/maxga/OneDrive/Documentos/TDD_Labs2/ylopez_mgarro_digital_design_lab_2023/db/altsyncram_jqo1.tdf Line: 1703
+        Warning (14320): Synthesized away node "top_Ram_module:topR|RAM2:ram|altsyncram:altsyncram_component|altsyncram_jqo1:auto_generated|ram_block1a70" File: C:/Users/maxga/OneDrive/Documentos/TDD_Labs2/ylopez_mgarro_digital_design_lab_2023/db/altsyncram_jqo1.tdf Line: 1727
+        Warning (14320): Synthesized away node "top_Ram_module:topR|RAM2:ram|altsyncram:altsyncram_component|altsyncram_jqo1:auto_generated|ram_block1a71" File: C:/Users/maxga/OneDrive/Documentos/TDD_Labs2/ylopez_mgarro_digital_design_lab_2023/db/altsyncram_jqo1.tdf Line: 1751
+        Warning (14320): Synthesized away node "top_Ram_module:topR|RAM2:ram|altsyncram:altsyncram_component|altsyncram_jqo1:auto_generated|ram_block1a72" File: C:/Users/maxga/OneDrive/Documentos/TDD_Labs2/ylopez_mgarro_digital_design_lab_2023/db/altsyncram_jqo1.tdf Line: 1775
+        Warning (14320): Synthesized away node "top_Ram_module:topR|RAM2:ram|altsyncram:altsyncram_component|altsyncram_jqo1:auto_generated|ram_block1a73" File: C:/Users/maxga/OneDrive/Documentos/TDD_Labs2/ylopez_mgarro_digital_design_lab_2023/db/altsyncram_jqo1.tdf Line: 1799
+        Warning (14320): Synthesized away node "top_Ram_module:topR|RAM2:ram|altsyncram:altsyncram_component|altsyncram_jqo1:auto_generated|ram_block1a74" File: C:/Users/maxga/OneDrive/Documentos/TDD_Labs2/ylopez_mgarro_digital_design_lab_2023/db/altsyncram_jqo1.tdf Line: 1823
+        Warning (14320): Synthesized away node "top_Ram_module:topR|RAM2:ram|altsyncram:altsyncram_component|altsyncram_jqo1:auto_generated|ram_block1a75" File: C:/Users/maxga/OneDrive/Documentos/TDD_Labs2/ylopez_mgarro_digital_design_lab_2023/db/altsyncram_jqo1.tdf Line: 1847
+        Warning (14320): Synthesized away node "top_Ram_module:topR|RAM2:ram|altsyncram:altsyncram_component|altsyncram_jqo1:auto_generated|ram_block1a76" File: C:/Users/maxga/OneDrive/Documentos/TDD_Labs2/ylopez_mgarro_digital_design_lab_2023/db/altsyncram_jqo1.tdf Line: 1871
+        Warning (14320): Synthesized away node "top_Ram_module:topR|RAM2:ram|altsyncram:altsyncram_component|altsyncram_jqo1:auto_generated|ram_block1a77" File: C:/Users/maxga/OneDrive/Documentos/TDD_Labs2/ylopez_mgarro_digital_design_lab_2023/db/altsyncram_jqo1.tdf Line: 1895
+        Warning (14320): Synthesized away node "top_Ram_module:topR|RAM2:ram|altsyncram:altsyncram_component|altsyncram_jqo1:auto_generated|ram_block1a78" File: C:/Users/maxga/OneDrive/Documentos/TDD_Labs2/ylopez_mgarro_digital_design_lab_2023/db/altsyncram_jqo1.tdf Line: 1919
+        Warning (14320): Synthesized away node "top_Ram_module:topR|RAM2:ram|altsyncram:altsyncram_component|altsyncram_jqo1:auto_generated|ram_block1a79" File: C:/Users/maxga/OneDrive/Documentos/TDD_Labs2/ylopez_mgarro_digital_design_lab_2023/db/altsyncram_jqo1.tdf Line: 1943
+        Warning (14320): Synthesized away node "top_Ram_module:topR|RAM2:ram|altsyncram:altsyncram_component|altsyncram_jqo1:auto_generated|ram_block1a80" File: C:/Users/maxga/OneDrive/Documentos/TDD_Labs2/ylopez_mgarro_digital_design_lab_2023/db/altsyncram_jqo1.tdf Line: 1967
+        Warning (14320): Synthesized away node "top_Ram_module:topR|RAM2:ram|altsyncram:altsyncram_component|altsyncram_jqo1:auto_generated|ram_block1a81" File: C:/Users/maxga/OneDrive/Documentos/TDD_Labs2/ylopez_mgarro_digital_design_lab_2023/db/altsyncram_jqo1.tdf Line: 1991
+        Warning (14320): Synthesized away node "top_Ram_module:topR|RAM2:ram|altsyncram:altsyncram_component|altsyncram_jqo1:auto_generated|ram_block1a82" File: C:/Users/maxga/OneDrive/Documentos/TDD_Labs2/ylopez_mgarro_digital_design_lab_2023/db/altsyncram_jqo1.tdf Line: 2015
+        Warning (14320): Synthesized away node "top_Ram_module:topR|RAM2:ram|altsyncram:altsyncram_component|altsyncram_jqo1:auto_generated|ram_block1a83" File: C:/Users/maxga/OneDrive/Documentos/TDD_Labs2/ylopez_mgarro_digital_design_lab_2023/db/altsyncram_jqo1.tdf Line: 2039
+        Warning (14320): Synthesized away node "top_Ram_module:topR|RAM2:ram|altsyncram:altsyncram_component|altsyncram_jqo1:auto_generated|ram_block1a84" File: C:/Users/maxga/OneDrive/Documentos/TDD_Labs2/ylopez_mgarro_digital_design_lab_2023/db/altsyncram_jqo1.tdf Line: 2063
+        Warning (14320): Synthesized away node "top_Ram_module:topR|RAM2:ram|altsyncram:altsyncram_component|altsyncram_jqo1:auto_generated|ram_block1a85" File: C:/Users/maxga/OneDrive/Documentos/TDD_Labs2/ylopez_mgarro_digital_design_lab_2023/db/altsyncram_jqo1.tdf Line: 2087
+        Warning (14320): Synthesized away node "top_Ram_module:topR|RAM2:ram|altsyncram:altsyncram_component|altsyncram_jqo1:auto_generated|ram_block1a86" File: C:/Users/maxga/OneDrive/Documentos/TDD_Labs2/ylopez_mgarro_digital_design_lab_2023/db/altsyncram_jqo1.tdf Line: 2111
+        Warning (14320): Synthesized away node "top_Ram_module:topR|RAM2:ram|altsyncram:altsyncram_component|altsyncram_jqo1:auto_generated|ram_block1a87" File: C:/Users/maxga/OneDrive/Documentos/TDD_Labs2/ylopez_mgarro_digital_design_lab_2023/db/altsyncram_jqo1.tdf Line: 2135
+        Warning (14320): Synthesized away node "top_Ram_module:topR|RAM2:ram|altsyncram:altsyncram_component|altsyncram_jqo1:auto_generated|ram_block1a88" File: C:/Users/maxga/OneDrive/Documentos/TDD_Labs2/ylopez_mgarro_digital_design_lab_2023/db/altsyncram_jqo1.tdf Line: 2159
+        Warning (14320): Synthesized away node "top_Ram_module:topR|RAM2:ram|altsyncram:altsyncram_component|altsyncram_jqo1:auto_generated|ram_block1a89" File: C:/Users/maxga/OneDrive/Documentos/TDD_Labs2/ylopez_mgarro_digital_design_lab_2023/db/altsyncram_jqo1.tdf Line: 2183
+        Warning (14320): Synthesized away node "top_Ram_module:topR|RAM2:ram|altsyncram:altsyncram_component|altsyncram_jqo1:auto_generated|ram_block1a90" File: C:/Users/maxga/OneDrive/Documentos/TDD_Labs2/ylopez_mgarro_digital_design_lab_2023/db/altsyncram_jqo1.tdf Line: 2207
+        Warning (14320): Synthesized away node "top_Ram_module:topR|RAM2:ram|altsyncram:altsyncram_component|altsyncram_jqo1:auto_generated|ram_block1a91" File: C:/Users/maxga/OneDrive/Documentos/TDD_Labs2/ylopez_mgarro_digital_design_lab_2023/db/altsyncram_jqo1.tdf Line: 2231
+        Warning (14320): Synthesized away node "top_Ram_module:topR|RAM2:ram|altsyncram:altsyncram_component|altsyncram_jqo1:auto_generated|ram_block1a92" File: C:/Users/maxga/OneDrive/Documentos/TDD_Labs2/ylopez_mgarro_digital_design_lab_2023/db/altsyncram_jqo1.tdf Line: 2255
+        Warning (14320): Synthesized away node "top_Ram_module:topR|RAM2:ram|altsyncram:altsyncram_component|altsyncram_jqo1:auto_generated|ram_block1a93" File: C:/Users/maxga/OneDrive/Documentos/TDD_Labs2/ylopez_mgarro_digital_design_lab_2023/db/altsyncram_jqo1.tdf Line: 2279
+        Warning (14320): Synthesized away node "top_Ram_module:topR|RAM2:ram|altsyncram:altsyncram_component|altsyncram_jqo1:auto_generated|ram_block1a94" File: C:/Users/maxga/OneDrive/Documentos/TDD_Labs2/ylopez_mgarro_digital_design_lab_2023/db/altsyncram_jqo1.tdf Line: 2303
+        Warning (14320): Synthesized away node "top_Ram_module:topR|RAM2:ram|altsyncram:altsyncram_component|altsyncram_jqo1:auto_generated|ram_block1a95" File: C:/Users/maxga/OneDrive/Documentos/TDD_Labs2/ylopez_mgarro_digital_design_lab_2023/db/altsyncram_jqo1.tdf Line: 2327
+        Warning (14320): Synthesized away node "top_Ram_module:topR|RAM2:ram|altsyncram:altsyncram_component|altsyncram_jqo1:auto_generated|ram_block1a96" File: C:/Users/maxga/OneDrive/Documentos/TDD_Labs2/ylopez_mgarro_digital_design_lab_2023/db/altsyncram_jqo1.tdf Line: 2351
+        Warning (14320): Synthesized away node "top_Ram_module:topR|RAM2:ram|altsyncram:altsyncram_component|altsyncram_jqo1:auto_generated|ram_block1a97" File: C:/Users/maxga/OneDrive/Documentos/TDD_Labs2/ylopez_mgarro_digital_design_lab_2023/db/altsyncram_jqo1.tdf Line: 2375
+        Warning (14320): Synthesized away node "top_Ram_module:topR|RAM2:ram|altsyncram:altsyncram_component|altsyncram_jqo1:auto_generated|ram_block1a98" File: C:/Users/maxga/OneDrive/Documentos/TDD_Labs2/ylopez_mgarro_digital_design_lab_2023/db/altsyncram_jqo1.tdf Line: 2399
+        Warning (14320): Synthesized away node "top_Ram_module:topR|RAM2:ram|altsyncram:altsyncram_component|altsyncram_jqo1:auto_generated|ram_block1a99" File: C:/Users/maxga/OneDrive/Documentos/TDD_Labs2/ylopez_mgarro_digital_design_lab_2023/db/altsyncram_jqo1.tdf Line: 2423
+        Warning (14320): Synthesized away node "top_Ram_module:topR|RAM2:ram|altsyncram:altsyncram_component|altsyncram_jqo1:auto_generated|ram_block1a100" File: C:/Users/maxga/OneDrive/Documentos/TDD_Labs2/ylopez_mgarro_digital_design_lab_2023/db/altsyncram_jqo1.tdf Line: 2447
+        Warning (14320): Synthesized away node "top_Ram_module:topR|RAM2:ram|altsyncram:altsyncram_component|altsyncram_jqo1:auto_generated|ram_block1a101" File: C:/Users/maxga/OneDrive/Documentos/TDD_Labs2/ylopez_mgarro_digital_design_lab_2023/db/altsyncram_jqo1.tdf Line: 2471
+        Warning (14320): Synthesized away node "top_Ram_module:topR|RAM2:ram|altsyncram:altsyncram_component|altsyncram_jqo1:auto_generated|ram_block1a102" File: C:/Users/maxga/OneDrive/Documentos/TDD_Labs2/ylopez_mgarro_digital_design_lab_2023/db/altsyncram_jqo1.tdf Line: 2495
+        Warning (14320): Synthesized away node "top_Ram_module:topR|RAM2:ram|altsyncram:altsyncram_component|altsyncram_jqo1:auto_generated|ram_block1a103" File: C:/Users/maxga/OneDrive/Documentos/TDD_Labs2/ylopez_mgarro_digital_design_lab_2023/db/altsyncram_jqo1.tdf Line: 2519
+        Warning (14320): Synthesized away node "top_Ram_module:topR|RAM2:ram|altsyncram:altsyncram_component|altsyncram_jqo1:auto_generated|ram_block1a104" File: C:/Users/maxga/OneDrive/Documentos/TDD_Labs2/ylopez_mgarro_digital_design_lab_2023/db/altsyncram_jqo1.tdf Line: 2543
+        Warning (14320): Synthesized away node "top_Ram_module:topR|RAM2:ram|altsyncram:altsyncram_component|altsyncram_jqo1:auto_generated|ram_block1a105" File: C:/Users/maxga/OneDrive/Documentos/TDD_Labs2/ylopez_mgarro_digital_design_lab_2023/db/altsyncram_jqo1.tdf Line: 2567
+        Warning (14320): Synthesized away node "top_Ram_module:topR|RAM2:ram|altsyncram:altsyncram_component|altsyncram_jqo1:auto_generated|ram_block1a106" File: C:/Users/maxga/OneDrive/Documentos/TDD_Labs2/ylopez_mgarro_digital_design_lab_2023/db/altsyncram_jqo1.tdf Line: 2591
+        Warning (14320): Synthesized away node "top_Ram_module:topR|RAM2:ram|altsyncram:altsyncram_component|altsyncram_jqo1:auto_generated|ram_block1a107" File: C:/Users/maxga/OneDrive/Documentos/TDD_Labs2/ylopez_mgarro_digital_design_lab_2023/db/altsyncram_jqo1.tdf Line: 2615
+        Warning (14320): Synthesized away node "top_Ram_module:topR|RAM2:ram|altsyncram:altsyncram_component|altsyncram_jqo1:auto_generated|ram_block1a108" File: C:/Users/maxga/OneDrive/Documentos/TDD_Labs2/ylopez_mgarro_digital_design_lab_2023/db/altsyncram_jqo1.tdf Line: 2639
+        Warning (14320): Synthesized away node "top_Ram_module:topR|RAM2:ram|altsyncram:altsyncram_component|altsyncram_jqo1:auto_generated|ram_block1a109" File: C:/Users/maxga/OneDrive/Documentos/TDD_Labs2/ylopez_mgarro_digital_design_lab_2023/db/altsyncram_jqo1.tdf Line: 2663
+        Warning (14320): Synthesized away node "top_Ram_module:topR|RAM2:ram|altsyncram:altsyncram_component|altsyncram_jqo1:auto_generated|ram_block1a110" File: C:/Users/maxga/OneDrive/Documentos/TDD_Labs2/ylopez_mgarro_digital_design_lab_2023/db/altsyncram_jqo1.tdf Line: 2687
+        Warning (14320): Synthesized away node "top_Ram_module:topR|RAM2:ram|altsyncram:altsyncram_component|altsyncram_jqo1:auto_generated|ram_block1a111" File: C:/Users/maxga/OneDrive/Documentos/TDD_Labs2/ylopez_mgarro_digital_design_lab_2023/db/altsyncram_jqo1.tdf Line: 2711
+        Warning (14320): Synthesized away node "top_Ram_module:topR|RAM2:ram|altsyncram:altsyncram_component|altsyncram_jqo1:auto_generated|ram_block1a112" File: C:/Users/maxga/OneDrive/Documentos/TDD_Labs2/ylopez_mgarro_digital_design_lab_2023/db/altsyncram_jqo1.tdf Line: 2735
+        Warning (14320): Synthesized away node "top_Ram_module:topR|RAM2:ram|altsyncram:altsyncram_component|altsyncram_jqo1:auto_generated|ram_block1a113" File: C:/Users/maxga/OneDrive/Documentos/TDD_Labs2/ylopez_mgarro_digital_design_lab_2023/db/altsyncram_jqo1.tdf Line: 2759
+        Warning (14320): Synthesized away node "top_Ram_module:topR|RAM2:ram|altsyncram:altsyncram_component|altsyncram_jqo1:auto_generated|ram_block1a114" File: C:/Users/maxga/OneDrive/Documentos/TDD_Labs2/ylopez_mgarro_digital_design_lab_2023/db/altsyncram_jqo1.tdf Line: 2783
+        Warning (14320): Synthesized away node "top_Ram_module:topR|RAM2:ram|altsyncram:altsyncram_component|altsyncram_jqo1:auto_generated|ram_block1a115" File: C:/Users/maxga/OneDrive/Documentos/TDD_Labs2/ylopez_mgarro_digital_design_lab_2023/db/altsyncram_jqo1.tdf Line: 2807
+        Warning (14320): Synthesized away node "top_Ram_module:topR|RAM2:ram|altsyncram:altsyncram_component|altsyncram_jqo1:auto_generated|ram_block1a116" File: C:/Users/maxga/OneDrive/Documentos/TDD_Labs2/ylopez_mgarro_digital_design_lab_2023/db/altsyncram_jqo1.tdf Line: 2831
+        Warning (14320): Synthesized away node "top_Ram_module:topR|RAM2:ram|altsyncram:altsyncram_component|altsyncram_jqo1:auto_generated|ram_block1a117" File: C:/Users/maxga/OneDrive/Documentos/TDD_Labs2/ylopez_mgarro_digital_design_lab_2023/db/altsyncram_jqo1.tdf Line: 2855
+        Warning (14320): Synthesized away node "top_Ram_module:topR|RAM2:ram|altsyncram:altsyncram_component|altsyncram_jqo1:auto_generated|ram_block1a118" File: C:/Users/maxga/OneDrive/Documentos/TDD_Labs2/ylopez_mgarro_digital_design_lab_2023/db/altsyncram_jqo1.tdf Line: 2879
+        Warning (14320): Synthesized away node "top_Ram_module:topR|RAM2:ram|altsyncram:altsyncram_component|altsyncram_jqo1:auto_generated|ram_block1a119" File: C:/Users/maxga/OneDrive/Documentos/TDD_Labs2/ylopez_mgarro_digital_design_lab_2023/db/altsyncram_jqo1.tdf Line: 2903
+        Warning (14320): Synthesized away node "top_Ram_module:topR|RAM2:ram|altsyncram:altsyncram_component|altsyncram_jqo1:auto_generated|ram_block1a120" File: C:/Users/maxga/OneDrive/Documentos/TDD_Labs2/ylopez_mgarro_digital_design_lab_2023/db/altsyncram_jqo1.tdf Line: 2927
+        Warning (14320): Synthesized away node "top_Ram_module:topR|RAM2:ram|altsyncram:altsyncram_component|altsyncram_jqo1:auto_generated|ram_block1a121" File: C:/Users/maxga/OneDrive/Documentos/TDD_Labs2/ylopez_mgarro_digital_design_lab_2023/db/altsyncram_jqo1.tdf Line: 2951
+        Warning (14320): Synthesized away node "top_Ram_module:topR|RAM2:ram|altsyncram:altsyncram_component|altsyncram_jqo1:auto_generated|ram_block1a122" File: C:/Users/maxga/OneDrive/Documentos/TDD_Labs2/ylopez_mgarro_digital_design_lab_2023/db/altsyncram_jqo1.tdf Line: 2975
+        Warning (14320): Synthesized away node "top_Ram_module:topR|RAM2:ram|altsyncram:altsyncram_component|altsyncram_jqo1:auto_generated|ram_block1a123" File: C:/Users/maxga/OneDrive/Documentos/TDD_Labs2/ylopez_mgarro_digital_design_lab_2023/db/altsyncram_jqo1.tdf Line: 2999
+        Warning (14320): Synthesized away node "top_Ram_module:topR|RAM2:ram|altsyncram:altsyncram_component|altsyncram_jqo1:auto_generated|ram_block1a124" File: C:/Users/maxga/OneDrive/Documentos/TDD_Labs2/ylopez_mgarro_digital_design_lab_2023/db/altsyncram_jqo1.tdf Line: 3023
+        Warning (14320): Synthesized away node "top_Ram_module:topR|RAM2:ram|altsyncram:altsyncram_component|altsyncram_jqo1:auto_generated|ram_block1a125" File: C:/Users/maxga/OneDrive/Documentos/TDD_Labs2/ylopez_mgarro_digital_design_lab_2023/db/altsyncram_jqo1.tdf Line: 3047
+        Warning (14320): Synthesized away node "top_Ram_module:topR|RAM2:ram|altsyncram:altsyncram_component|altsyncram_jqo1:auto_generated|ram_block1a126" File: C:/Users/maxga/OneDrive/Documentos/TDD_Labs2/ylopez_mgarro_digital_design_lab_2023/db/altsyncram_jqo1.tdf Line: 3071
+        Warning (14320): Synthesized away node "top_Ram_module:topR|RAM2:ram|altsyncram:altsyncram_component|altsyncram_jqo1:auto_generated|ram_block1a127" File: C:/Users/maxga/OneDrive/Documentos/TDD_Labs2/ylopez_mgarro_digital_design_lab_2023/db/altsyncram_jqo1.tdf Line: 3095
+Warning (12241): 5 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Warning (13012): Latch top_Ram_module:topR|write_mem:escribir_memoria|data[0] has unsafe behavior File: C:/Users/maxga/OneDrive/Documentos/TDD_Labs2/ylopez_mgarro_digital_design_lab_2023/write_mem.sv Line: 8
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal btn[0] File: C:/Users/maxga/OneDrive/Documentos/TDD_Labs2/ylopez_mgarro_digital_design_lab_2023/main.sv Line: 2
+Warning (13012): Latch top_Ram_module:topR|write_mem:escribir_memoria|data[1] has unsafe behavior File: C:/Users/maxga/OneDrive/Documentos/TDD_Labs2/ylopez_mgarro_digital_design_lab_2023/write_mem.sv Line: 8
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal btn[0] File: C:/Users/maxga/OneDrive/Documentos/TDD_Labs2/ylopez_mgarro_digital_design_lab_2023/main.sv Line: 2
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "x[0]" is stuck at GND File: C:/Users/maxga/OneDrive/Documentos/TDD_Labs2/ylopez_mgarro_digital_design_lab_2023/main.sv Line: 12
+    Warning (13410): Pin "x[1]" is stuck at GND File: C:/Users/maxga/OneDrive/Documentos/TDD_Labs2/ylopez_mgarro_digital_design_lab_2023/main.sv Line: 12
+    Warning (13410): Pin "x[2]" is stuck at GND File: C:/Users/maxga/OneDrive/Documentos/TDD_Labs2/ylopez_mgarro_digital_design_lab_2023/main.sv Line: 12
+    Warning (13410): Pin "x[3]" is stuck at GND File: C:/Users/maxga/OneDrive/Documentos/TDD_Labs2/ylopez_mgarro_digital_design_lab_2023/main.sv Line: 12
+    Warning (13410): Pin "x[4]" is stuck at GND File: C:/Users/maxga/OneDrive/Documentos/TDD_Labs2/ylopez_mgarro_digital_design_lab_2023/main.sv Line: 12
+    Warning (13410): Pin "x[5]" is stuck at GND File: C:/Users/maxga/OneDrive/Documentos/TDD_Labs2/ylopez_mgarro_digital_design_lab_2023/main.sv Line: 12
+    Warning (13410): Pin "x[6]" is stuck at GND File: C:/Users/maxga/OneDrive/Documentos/TDD_Labs2/ylopez_mgarro_digital_design_lab_2023/main.sv Line: 12
+    Warning (13410): Pin "x[7]" is stuck at GND File: C:/Users/maxga/OneDrive/Documentos/TDD_Labs2/ylopez_mgarro_digital_design_lab_2023/main.sv Line: 12
+    Warning (13410): Pin "x[8]" is stuck at GND File: C:/Users/maxga/OneDrive/Documentos/TDD_Labs2/ylopez_mgarro_digital_design_lab_2023/main.sv Line: 12
+    Warning (13410): Pin "x[9]" is stuck at GND File: C:/Users/maxga/OneDrive/Documentos/TDD_Labs2/ylopez_mgarro_digital_design_lab_2023/main.sv Line: 12
+    Warning (13410): Pin "y[0]" is stuck at GND File: C:/Users/maxga/OneDrive/Documentos/TDD_Labs2/ylopez_mgarro_digital_design_lab_2023/main.sv Line: 15
+    Warning (13410): Pin "y[1]" is stuck at GND File: C:/Users/maxga/OneDrive/Documentos/TDD_Labs2/ylopez_mgarro_digital_design_lab_2023/main.sv Line: 15
+    Warning (13410): Pin "y[2]" is stuck at GND File: C:/Users/maxga/OneDrive/Documentos/TDD_Labs2/ylopez_mgarro_digital_design_lab_2023/main.sv Line: 15
+    Warning (13410): Pin "y[3]" is stuck at GND File: C:/Users/maxga/OneDrive/Documentos/TDD_Labs2/ylopez_mgarro_digital_design_lab_2023/main.sv Line: 15
+    Warning (13410): Pin "y[4]" is stuck at GND File: C:/Users/maxga/OneDrive/Documentos/TDD_Labs2/ylopez_mgarro_digital_design_lab_2023/main.sv Line: 15
+    Warning (13410): Pin "y[5]" is stuck at GND File: C:/Users/maxga/OneDrive/Documentos/TDD_Labs2/ylopez_mgarro_digital_design_lab_2023/main.sv Line: 15
+    Warning (13410): Pin "y[6]" is stuck at GND File: C:/Users/maxga/OneDrive/Documentos/TDD_Labs2/ylopez_mgarro_digital_design_lab_2023/main.sv Line: 15
+    Warning (13410): Pin "y[7]" is stuck at GND File: C:/Users/maxga/OneDrive/Documentos/TDD_Labs2/ylopez_mgarro_digital_design_lab_2023/main.sv Line: 15
+    Warning (13410): Pin "y[8]" is stuck at GND File: C:/Users/maxga/OneDrive/Documentos/TDD_Labs2/ylopez_mgarro_digital_design_lab_2023/main.sv Line: 15
+    Warning (13410): Pin "y[9]" is stuck at GND File: C:/Users/maxga/OneDrive/Documentos/TDD_Labs2/ylopez_mgarro_digital_design_lab_2023/main.sv Line: 15
+Info (286030): Timing-Driven Synthesis is running
+Info (17036): Removed 5 MSB VCC or GND address nodes from RAM block "top_Ram_module:topR|RAM2:ram|altsyncram:altsyncram_component|altsyncram_jqo1:auto_generated|ALTSYNCRAM" File: C:/Users/maxga/OneDrive/Documentos/TDD_Labs2/ylopez_mgarro_digital_design_lab_2023/db/altsyncram_jqo1.tdf Line: 47
 Info (144001): Generated suppressed messages file C:/Users/maxga/OneDrive/Documentos/TDD_Labs2/ylopez_mgarro_digital_design_lab_2023/output_files/ProyectoTDD.map.smsg
-Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 3 warnings
-    Info: Peak virtual memory: 4769 megabytes
-    Info: Processing ended: Wed Nov 22 00:05:04 2023
-    Info: Elapsed time: 00:00:12
-    Info: Total CPU time (on all processors): 00:00:28
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 214 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 5 input pins
+    Info (21059): Implemented 81 output pins
+    Info (21061): Implemented 96 logic cells
+    Info (21064): Implemented 32 RAM segments
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 142 warnings
+    Info: Peak virtual memory: 4854 megabytes
+    Info: Processing ended: Wed Nov 22 01:26:16 2023
+    Info: Elapsed time: 00:00:17
+    Info: Total CPU time (on all processors): 00:00:40
 
 
-+--------------------------------------------+
-; Analysis & Elaboration Suppressed Messages ;
-+--------------------------------------------+
++------------------------------------------+
+; Analysis & Synthesis Suppressed Messages ;
++------------------------------------------+
 The suppressed messages can be found in C:/Users/maxga/OneDrive/Documentos/TDD_Labs2/ylopez_mgarro_digital_design_lab_2023/output_files/ProyectoTDD.map.smsg.
 
 
