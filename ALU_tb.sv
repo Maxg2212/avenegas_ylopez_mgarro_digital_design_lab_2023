@@ -43,6 +43,3 @@ module ALU_tb();
   end
 
 endmodule
-
-  // Resultados
-endmodule

@@ -1,7 +1,7 @@
-Analysis & Elaboration Status : Successful - Mon Nov 20 21:23:20 2023
+Analysis & Elaboration Status : Successful - Tue Nov 21 19:48:22 2023
 Quartus Prime Version : 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 Revision Name : ProyectoTDD
-Top-level Entity Name : Processor_module
+Top-level Entity Name : ALU
 Family : Cyclone V
 Logic utilization (in ALMs) : N/A until Partition Merge
 Total registers : N/A until Partition Merge
