@@ -65,7 +65,7 @@ set_global_assignment -name EDA_SIMULATION_TOOL "ModelSim-Altera (Verilog)"
 set_global_assignment -name EDA_TIME_SCALE "1 ps" -section_id eda_simulation
 set_global_assignment -name EDA_OUTPUT_DATA_FORMAT "VERILOG HDL" -section_id eda_simulation
 set_global_assignment -name EDA_TEST_BENCH_ENABLE_STATUS TEST_BENCH_MODE -section_id eda_simulation
-set_global_assignment -name EDA_NATIVELINK_SIMULATION_TEST_BENCH ALU_tb -section_id eda_simulation
+set_global_assignment -name EDA_NATIVELINK_SIMULATION_TEST_BENCH main_tb -section_id eda_simulation
 set_global_assignment -name EDA_TEST_BENCH_NAME ram_tb -section_id eda_simulation
 set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id ram_tb
 set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME ram_tb -section_id ram_tb
@@ -111,12 +111,9 @@ set_global_assignment -name SYSTEMVERILOG_FILE Processor_module.sv
 set_global_assignment -name SYSTEMVERILOG_FILE Processor_module_tb.sv
 set_global_assignment -name SYSTEMVERILOG_FILE top_Ram_module.sv
 set_global_assignment -name SYSTEMVERILOG_FILE ALU_tb.sv
-set_global_assignment -name EDA_TEST_BENCH_FILE ram_tb.sv -section_id ram_tb
-set_global_assignment -name EDA_TEST_BENCH_FILE main_tb.sv -section_id main_tb
 set_global_assignment -name EDA_TEST_BENCH_NAME ALU_tb -section_id eda_simulation
 set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id ALU_tb
 set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME ALU_tb -section_id ALU_tb
-set_global_assignment -name EDA_TEST_BENCH_FILE ALU_tb.sv -section_id ALU_tb
 set_global_assignment -name SYSTEMVERILOG_FILE VGA_pll.sv
 set_global_assignment -name SYSTEMVERILOG_FILE VGA_tb.sv
 set_global_assignment -name SYSTEMVERILOG_FILE sincronizador_horizontal.sv
@@ -134,13 +131,20 @@ set_global_assignment -name SYSTEMVERILOG_FILE tb_vga.sv
 set_global_assignment -name SYSTEMVERILOG_FILE vgaController.sv
 set_global_assignment -name SYSTEMVERILOG_FILE vga_top.sv
 set_global_assignment -name SYSTEMVERILOG_FILE videoGen.sv
-set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
-set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
-set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
 set_location_assignment PIN_F10 -to blank_n
 set_location_assignment PIN_A11 -to clk_25MHz
 set_location_assignment PIN_B11 -to h_sync
 set_location_assignment PIN_AE12 -to reset
 set_location_assignment PIN_C10 -to sync_n
 set_location_assignment PIN_D11 -to v_sync
+set_global_assignment -name EDA_TEST_BENCH_NAME tb_vga -section_id eda_simulation
+set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id tb_vga
+set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME tb_vga -section_id tb_vga
+set_global_assignment -name EDA_TEST_BENCH_FILE ram_tb.sv -section_id ram_tb
+set_global_assignment -name EDA_TEST_BENCH_FILE main_tb.sv -section_id main_tb
+set_global_assignment -name EDA_TEST_BENCH_FILE ALU_tb.sv -section_id ALU_tb
+set_global_assignment -name EDA_TEST_BENCH_FILE tb_vga.sv -section_id tb_vga
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

@@ -8,7 +8,7 @@ module top_Ram_module(input logic clk, reset, switch,
 			logic [31:0] data;
 			logic [15:0] addressRead, addressWrite;
 			
-			RAM2 ram(address, seconds, data, wrenable, q);
+			RAM3 ram(address, seconds, data, wrenable, q);
 			
 			counter contador(switch, seconds, reset, addressRead);
 			
